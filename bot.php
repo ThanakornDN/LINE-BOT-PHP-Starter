@@ -16,7 +16,7 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			
-			if(1>0){
+			if($text!=0){
 				$a='ei ei';
 			}
 			
