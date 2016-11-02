@@ -20,7 +20,7 @@ if (!is_null($events['events'])) {
 			$messages = [
 				'type' => 'text',
 				
-				if ( ereg ( "Hello", $text, $regs ) )
+				if ($text=='1') )
 				{
 				    'text'=>"Find it";
 				}else{
