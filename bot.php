@@ -19,7 +19,13 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => 'HELLO WORLD'
+				//'text' => $text
+					if ( ereg ( "สวัสดี", $text, $regs ) )
+					{
+					    'text' => "Find it's";
+					}else{
+						'text' => "Not Find it's";
+					}
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
