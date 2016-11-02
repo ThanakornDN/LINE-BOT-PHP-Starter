@@ -1,6 +1,6 @@
 <?php
 $access_token = 'VlxSZTyumW3qJsUKMnKOTLdqRd7chFWFJARPb7ZB/n3Lzf/lntpuOwBiLNieMReH3aFrT4MoAEWCdFruNp/7VHg3RkM1ja3AUtYVlDabJUgo6wAKsQyrZVo9Vxq+/py7le7bLr6ZDSp6qQHy0RiI2gdB04t89/1O/w1cDnyilFU=';
-
+$a="OK";
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -16,12 +16,12 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
-				if ($text=='1')
-				{
-				    $a=>"Find it";
-				}else{
-				    $a=>"Not Find it";
-				}
+// 				if ($text=='1')
+// 				{
+// 				    $a=>"Find it";
+// 				}else{
+// 				    $a=>"Not Find it";
+// 				}
 			
 			// Build message to reply back
 			$messages = [
