@@ -16,16 +16,17 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
+				if ($text=='1') )
+				{
+				    $a=>"Find it";
+				}else{
+				    $a=>"Not Find it";
+				}
+			
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				
-				if ($text=='1') )
-				{
-				    'text'=>"Find it";
-				}else{
-				    'text'=>"Not Find it";
-				}
+				'text' => $a
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
