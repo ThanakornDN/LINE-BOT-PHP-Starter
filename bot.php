@@ -1,7 +1,7 @@
 <?php
 $access_token = 'VlxSZTyumW3qJsUKMnKOTLdqRd7chFWFJARPb7ZB/n3Lzf/lntpuOwBiLNieMReH3aFrT4MoAEWCdFruNp/7VHg3RkM1ja3AUtYVlDabJUgo6wAKsQyrZVo9Vxq+/py7le7bLr6ZDSp6qQHy0RiI2gdB04t89/1O/w1cDnyilFU=';
-$a="OK1";
-$regs="";
+$msg="OK";
+
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -18,14 +18,14 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			
 			//if($text!="OK"){
-			if ( ereg ( "Hello", $text, $regs ) ){
-				$a='ei ei';
+			if ( ereg ( "สวัสดี", $text, $regs ) ){
+				$msg='ei ei';
 			}
 			
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $a
+				'text' => $msg
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
