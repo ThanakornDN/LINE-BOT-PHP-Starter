@@ -17,7 +17,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			
 			if(1>0){
-				$b=0;
+				$a='ei ei';
 			}
 			
 			// Build message to reply back
