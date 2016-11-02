@@ -19,7 +19,9 @@ if (!is_null($events['events'])) {
 			
 			//if($text!="OK"){
 			if ( ereg ( "สวัสดี", $text, $regs ) ){
-				$msg='ei ei';
+				$msg='สวัสดีครับ';
+			}else if(ereg ( "faucet", $text, $regs )){
+				$msg='URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php';
 			}
 			
 			// Build message to reply back
