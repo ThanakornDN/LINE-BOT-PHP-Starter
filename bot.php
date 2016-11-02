@@ -18,7 +18,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			
 			//if($text!="OK"){
-			if ( eregi ( "สวัสดี", $text, $regs ) ){
+			if ( (eregi ( "สวัสดี", $text, $regs ))or(eregi ( "Hello", $text, $regs )) ){
 				$msg='สวัสดีครับ';
 			}else if(eregi ( "faucet", $text, $regs )){
 				$msg='เข้าไปดูได้ตามลิ้งนี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php';
