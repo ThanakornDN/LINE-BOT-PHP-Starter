@@ -17,9 +17,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			if ($event['message']['text']=='1'){
-				$a=>"Find it";
-			}else{
-				$a=>"Not Find it";
+				$a=>"Find it"
 			}
 			
 			// Build message to reply back
