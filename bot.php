@@ -16,6 +16,10 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			
+			if(1>0){
+				$b=0;
+			}
+			
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
