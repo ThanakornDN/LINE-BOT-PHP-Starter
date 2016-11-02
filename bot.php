@@ -21,11 +21,9 @@ if (!is_null($events['events'])) {
 			if ( (eregi ( "สวัสดี", $text, $regs ))or(eregi ( "Hello", $text, $regs )) ){
 				$msg='สวัสดีครับ';
 			}else if(eregi ( "faucet", $text, $regs )){
-				//$msg='เข้าไปดูได้ตามลิ้งนี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php';
-				$msg='สวัสดีครับ';
+				$msg='เข้าไปดูได้ตามลิ้งนี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php';
 			}else{
-				//$msg='ขออภัยครับ ไม่มีในคำหลัก ลองพิมพ์มาใหม่นะครับ';
-				$msg='สวัสดีครับ';
+				$msg='ขออภัยครับ ไม่มีในคำหลัก ลองพิมพ์มาใหม่นะครับ';
 			}
 			
 			// Build message to reply back
