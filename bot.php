@@ -19,7 +19,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-					if ( ereg ( "สวัสดี", $text, $regs ) )
+					if ( ereg ( "HELLO", $text, $regs ) )
 					{
 					    'text' => "Find it's";
 					}else{
