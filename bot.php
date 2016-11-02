@@ -18,7 +18,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			
 			//if($text!="OK"){
-			if ( ereg ( "Hello", $text, $regs ) )
+			if ( ereg ( "Hello", $text, $regs ) ){
 				$a='ei ei';
 			}
 			
