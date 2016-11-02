@@ -16,7 +16,7 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
-				if ($text=='1') )
+				if ($text=='1')
 				{
 				    $a=>"Find it";
 				}else{
