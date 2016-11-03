@@ -31,16 +31,15 @@ if (!is_null($events['events'])) {
 				];
 			}else if(eregi( "faucet", $text, $regs )){
 				$messages = [
-				'type'=>'text',
-				'text' =>'เข้าไปดูได้ตามลิ้งนี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php'
+					'type'=>'text',
+					'text' =>'เข้าไปดูได้ตามลิ้งค์นี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php'
 				];
-// 			}else if( (eregi ( "image", $text, $regs ))or(eregi ( "ขอรูป", $text, $regs )) ){
-// 				$messages = [
-// 					"type"=>"image",
-// 					"originalContentUrl"=>"https://example.com/original.jpg",
-// 					"previewImageUrl"=>"https://example.com/preview.jpg"
-// 				];
-// 			}
+			}else if( (eregi ( "image", $text, $regs ))or(eregi ( "ขอรูป", $text, $regs )) ){
+				$messages = [
+					"type"=>"image",
+					"originalContentUrl"=>"https://example.com/original.jpg",
+					"previewImageUrl"=>"https://example.com/preview.jpg"
+				];
 			}else{
 				$messages = [
 					'type'=>'text',
