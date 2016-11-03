@@ -30,10 +30,9 @@ if (!is_null($events['events'])) {
 			$messages = [
 				//'type' => 'text',
 				//'text' => $msg
-				"id": "325708",
-				"type": "sticker",
-				"packageId": "1",
-				"stickerId": "1"
+				'type': 'sticker',
+				'packageId': '1',
+				'stickerId': '1'
 				
 			];
 
