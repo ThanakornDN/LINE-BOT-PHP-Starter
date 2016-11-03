@@ -29,9 +29,11 @@ if (!is_null($events['events'])) {
 					'type'=>'text',
 					'text'=>'สวัสดีครับ1'
 				];
-// 			}else if(eregi( "faucet", $text, $regs )){
-// 				'type'=>'text',
-// 				'text' =>'เข้าไปดูได้ตามลิ้งนี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php'
+			}else if(eregi( "faucet", $text, $regs )){
+				$messages = [
+				'type'=>'text',
+				'text' =>'เข้าไปดูได้ตามลิ้งนี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php'
+				];
 // 			}else if( (eregi ( "image", $text, $regs ))or(eregi ( "ขอรูป", $text, $regs )) ){
 // 				$messages = [
 // 					"type"=>"image",
