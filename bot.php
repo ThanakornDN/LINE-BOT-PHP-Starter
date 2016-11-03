@@ -17,7 +17,6 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			
-			//if($text!="OK"){
 			if ( (eregi ( "สวัสดี", $text, $regs ))or(eregi ( "Hello", $text, $regs )) ){
 				$msg='สวัสดีครับ';
 			}else if(eregi ( "faucet", $text, $regs )){
