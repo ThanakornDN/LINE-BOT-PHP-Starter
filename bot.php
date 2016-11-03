@@ -37,16 +37,14 @@ if (!is_null($events['events'])) {
 			}else if( (eregi ( "image", $text, $regs ))or(eregi ( "รูป", $text, $regs )) ){
 				$messages = [
 					"type"=>"image",
-// 					"originalContentUrl"=>"https://example.com/original.jpg",
-// 					"previewImageUrl"=>"https://example.com/preview.jpg"
-					"originalContentUrl"=>"http://www.4gamer.net/games/153/G015366/20130212019/TN/007.jpg",
-					"previewImageUrl"=>"http://www.4gamer.net/games/153/G015366/20130212019/TN/007.jpg"
+					"originalContentUrl"=>"https://example.com/original.jpg",
+					"previewImageUrl"=>"https://example.com/preview.jpg"
 				];
 			}else if((eregi ( "video", $text, $regs ))or(eregi ( "วีดีโอ", $text, $regs ))){
 				$messages = [
 				"type"=>"video",
-				"originalContentUrl"=>"https://example.com/original.mp4",
-				"previewImageUrl"=>"https://example.com/preview.jpg"
+				"originalContentUrl"=>"https://www.youtube.com/watch?v=d2Kj7YybM5o",
+				"previewImageUrl"=>"https://www.youtube.com/watch?v=d2Kj7YybM5o"
 				];	
 			}else{
 				$messages = [
