@@ -1,6 +1,7 @@
 <?php
 $access_token = 'VlxSZTyumW3qJsUKMnKOTLdqRd7chFWFJARPb7ZB/n3Lzf/lntpuOwBiLNieMReH3aFrT4MoAEWCdFruNp/7VHg3RkM1ja3AUtYVlDabJUgo6wAKsQyrZVo9Vxq+/py7le7bLr6ZDSp6qQHy0RiI2gdB04t89/1O/w1cDnyilFU=';
 $msg="OK";
+$m_type;
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -18,16 +19,19 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			
 			if ( (eregi ( "สวัสดี", $text, $regs ))or(eregi ( "Hello", $text, $regs )) ){
+				$m_type='text';
 				$msg='สวัสดีครับ';
 			}else if(eregi ( "faucet", $text, $regs )){
+				$m_type='text';
 				$msg='เข้าไปดูได้ตามลิ้งนี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php';
 			}else{
+				$m_type='text';
 				$msg='ขออภัยครับ ไม่มีในคำหลัก ลองพิมพ์มาใหม่นะครับ';
 			}
 			
 			// Build message to reply back
 			$messages = [
-				'type' => 'text',
+				'type' => $m_type,
 				'text' => $msg
 				
 // 				"type"=>"image",
