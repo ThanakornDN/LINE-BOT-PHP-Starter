@@ -23,8 +23,7 @@ if (!is_null($events['events'])) {
 			}else if(eregi ( "faucet", $text, $regs )){
 				$msg='เข้าไปดูได้ตามลิ้งนี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php';
 			}else{
-				//$msg='ขออภัยครับ ไม่มีในคำหลัก ลองพิมพ์มาใหม่นะครับ';
-				$msg = $s_msg;
+				$msg='ขออภัยครับ ไม่มีในคำหลัก ลองพิมพ์มาใหม่นะครับ';
 			}
 			
 			// Build message to reply back
