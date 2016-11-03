@@ -19,22 +19,10 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			
-			if ( (eregi ( "สวัสดี", $text, $regs ))or(eregi ( "Hello", $text, $regs )) ){
-				$messages = [
-					'type'=>'text';
-					'text'=>'สวัสดีครับ';
-				];
-			}else if(eregi ( "faucet", $text, $regs )){
-				$messages = [
-				'type'=>'text';
-				'text' =>'เข้าไปดูได้ตามลิ้งนี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php';
-				];
-			}else{
-				$messages = [
-				'type'=>'text';
-				'text'=>'ขออภัยครับ ไม่มีในคำหลัก ลองพิมพ์มาใหม่นะครับ';
-				];
-			}
+			$messages = [
+				'type' => 'text',
+				'text' => $text
+			];
 			
 			// Build message to reply back
 // 			$messages = [
