@@ -27,23 +27,31 @@ if (!is_null($events['events'])) {
 			if ( (eregi ( "สวัสดี", $text, $regs ))or(eregi ( "Hello", $text, $regs )) ){
 				$messages = [
 					'type'=>'text',
-					'text'=>'สวัสดีครับ1'
+					'text'=>'สวัสดีครับ'
 				];
 			}else if(eregi( "faucet", $text, $regs )){
 				$messages = [
 					'type'=>'text',
 					'text' =>'เข้าไปดูได้ตามลิ้งค์นี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php'
 				];
-			}else if( (eregi ( "image", $text, $regs ))or(eregi ( "ขอรูป", $text, $regs )) ){
+			}else if( (eregi ( "image", $text, $regs ))or(eregi ( "รูป", $text, $regs )) ){
 				$messages = [
 					"type"=>"image",
-					"originalContentUrl"=>"https://example.com/original.jpg",
-					"previewImageUrl"=>"https://example.com/preview.jpg"
+// 					"originalContentUrl"=>"https://example.com/original.jpg",
+// 					"previewImageUrl"=>"https://example.com/preview.jpg"
+					"originalContentUrl"=>"http://www.4gamer.net/games/153/G015366/20130212019/TN/007.jpg",
+					"previewImageUrl"=>"http://www.4gamer.net/games/153/G015366/20130212019/TN/007.jpg"
 				];
+			}else if((eregi ( "video", $text, $regs ))or(eregi ( "วีดีโอ", $text, $regs ))){
+				$messages = [
+				"type"=>"video",
+				"originalContentUrl"=>"https://example.com/original.mp4",
+				"previewImageUrl"=>"https://example.com/preview.jpg"
+				];	
 			}else{
 				$messages = [
 					'type'=>'text',
-					'text'=>'สวัสดีครับ2'
+					'text'=>'ขออภัยครับ ไม่มีในคำหลักนี้ ลองพิมพ์มาใหม่นะครับ'
 				];
 			}
 			
