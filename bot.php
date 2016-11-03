@@ -19,10 +19,33 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			
-			$messages = [
-				'type' => 'text',
-				'text' => $text
-			];
+// 			$messages = [
+// 				'type' => 'text',
+// 				'text' => $text
+// 			];
+			
+			if ( (eregi ( "สวัสดี", $text, $regs ))or(eregi ( "Hello", $text, $regs )) ){
+				$messages = [
+					'type'=>'text';
+					'text'=>'สวัสดีครับ1';
+				];
+			}
+// 			else if(eregi ( "faucet", $text, $regs )){
+// 				'type'=>'text';
+// 				'text' =>'เข้าไปดูได้ตามลิ้งนี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php';
+// 			}else if( (eregi ( "image", $text, $regs ))or(eregi ( "ขอรูป", $text, $regs )) ){
+// 				$messages = [
+// 					"type"=>"image",
+// 					"originalContentUrl"=>"https://example.com/original.jpg",
+// 					"previewImageUrl"=>"https://example.com/preview.jpg"
+// 				];
+// 			}
+			else{
+				$messages = [
+					'type'=>'text';
+					'text'=>'สวัสดีครับ2';
+				];
+			}
 			
 			// Build message to reply back
 // 			$messages = [
