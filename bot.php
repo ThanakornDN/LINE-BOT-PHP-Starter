@@ -29,9 +29,14 @@ if (!is_null($events['events'])) {
 			$messages = [
 // 				'type' => 'text',
 // 				'text' => $msg
-    "type"=>"image",
-    "originalContentUrl"=>"https://example.com/original.jpg",
-    "previewImageUrl"=>"https://example.com/preview.jpg"
+				
+// 				"type"=>"image",
+// 				"originalContentUrl"=>"https://example.com/original.jpg",
+// 				"previewImageUrl"=>"https://example.com/preview.jpg"
+				
+				"type"=>"video",
+				"originalContentUrl"=>"https://example.com/original.mp4",
+				"previewImageUrl"=>"https://example.com/preview.jpg"
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
