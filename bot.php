@@ -52,6 +52,34 @@ if (!is_null($events['events'])) {
 // 				"packageId"=>"1",
 // 				"stickerId"=>"1"
 				
+  "type"=>"template",
+  "altText"=>"this is a buttons template",
+  "template":{
+      "type"=>"buttons",
+      "thumbnailImageUrl"=>"https://example.com/bot/images/image.jpg",
+      "title"=>"Menu",
+      "text"=>"Please select",
+      "actions"=> [
+          {
+            "type"=> "postback",
+            "label"=> "Buy",
+            "data"=> "action=buy&itemid=123"
+          },
+          {
+            "type"=> "postback",
+            "label"=> "Add to cart",
+            "data"=> "action=add&itemid=123"
+          },
+          {
+            "type"=> "uri",
+            "label"=> "View detail",
+            "uri"=> "http://example.com/page/123"
+          }
+      ]
+  }
+				
+				
+				
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
@@ -61,15 +89,7 @@ if (!is_null($events['events'])) {
 				'messages' => [$messages],
 			];
 				
-			$post ='{
-	"replyToken": "VlxSZTyumW3qJsUKMnKOTLdqRd7chFWFJARPb7ZB\/n3Lzf\/lntpuOwBiLNieMReH3aFrT4MoAEWCdFruNp\/7VHg3RkM1ja3AUtYVlDabJUgo6wAKsQyrZVo9Vxq+\/py7le7bLr6ZDSp6qQHy0RiI2gdB04t89\/1O\/w1cDnyilFU=",
-	"messages": {
-		"type": "sticker",
-		"packageId": "1",
-		"stickerId": "1"
-	}
-}';
-			//$post = json_encode($data);
+			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 			$ch = curl_init($url);
