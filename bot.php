@@ -19,11 +19,6 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			
-// 			$messages = [
-// 				'type' => 'text',
-// 				'text' => $text
-// 			];
-			
 			if ( (eregi ( "สวัสดี", $text, $regs ))or(eregi ( "Hello", $text, $regs )) ){
 				$messages = [
 					'type'=>'text',
@@ -102,63 +97,7 @@ if (!is_null($events['events'])) {
 					'text'=>'ขออภัยครับ ไม่มีในคำหลักนี้ ลองพิมพ์มาใหม่นะครับ'
 				];
 			}
-			
-			// Build message to reply back
-// 			$messages = [
-// 				'type' => $m_type,
-// 				'text' => $msg
-				
-// 				"type"=>"image",
-// 				"originalContentUrl"=>"https://example.com/original.jpg",
-// 				"previewImageUrl"=>"https://example.com/preview.jpg"
-				
-// 				"type"=>"video",
-// 				"originalContentUrl"=>"https://example.com/original.mp4",
-// 				"previewImageUrl"=>"https://example.com/preview.jpg"
 
-// 				"type"=>"audio",
-// 				"originalContentUrl"=>"https://example.com/original.m4a",
-// 				"duration"=>240000
-
-// 				"type"=>"location",
-// 				"title"=>"my location",
-// 				"address"=>"〒150-0002 東京都渋谷区渋谷２丁目２１−１",
-// 				"latitude"=>35.65910807942215,
-// 				"longitude"=>139.70372892916203
-				
-// 				"type"=>"sticker",
-// 				"packageId"=>"1",
-// 				"stickerId"=>"1"
-				
-// 				"type"=>"template",
-// 				"altText"=>"this is a buttons template",
-// 				"template"=>[
-// 				    "type"=>"buttons",
-// 				    "thumbnailImageUrl"=>"https://example.com/bot/images/image.jpg",
-// 				    "title"=>"Menu",
-// 				    "text"=>"Please select",
-// 				    "actions"=> [
-// 					[
-// 					  "type"=> "postback",
-// 					  "label"=> "Buy",
-// 					  "data"=> "action=buy&itemid=123"
-// 					],
-// 					[
-// 					  "type"=> "postback",
-// 					  "label"=> "Add to cart",
-// 					  "data"=> "action=add&itemid=123"
-// 					],
-// 					[
-// 					  "type"=> "uri",
-// 					  "label"=> "View detail",
-// 					  "uri"=> "http://example.com/page/123"
-// 					]
-// 				    ]
-// 				]
-				
-				
-				
-// 			];
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
