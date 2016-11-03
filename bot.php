@@ -19,20 +19,54 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			
 			if ( (eregi ( "สวัสดี", $text, $regs ))or(eregi ( "Hello", $text, $regs )) ){
-				$m_type='text';
-				$msg='สวัสดีครับ';
+				$messages = [
+					'type'=>'text';
+					'text'=>'สวัสดีครับ';
+				];
 			}else if(eregi ( "faucet", $text, $regs )){
-				$m_type='text';
-				$msg='เข้าไปดูได้ตามลิ้งนี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php';
+				'type'=>'text';
+				'text' =>'เข้าไปดูได้ตามลิ้งนี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php';
+			}else if( (eregi ( "image", $text, $regs ))or(eregi ( "ขอรูป", $text, $regs )) ){
+				$messages = [
+					"type"=>"image",
+					"originalContentUrl"=>"https://example.com/original.jpg",
+					"previewImageUrl"=>"https://example.com/preview.jpg"
+				];
+			}else if((eregi ( "video", $text, $regs ))or(eregi ( "ดูวีดีโอ", $text, $regs ))){
+				$messages = [
+				"type"=>"video",
+				"originalContentUrl"=>"https://example.com/original.mp4",
+				"previewImageUrl"=>"https://example.com/preview.jpg"
+				];	
+			}else if((eregi ( "audio", $text, $regs ))or(eregi ( "ฟังเสียง", $text, $regs ))){
+				$messages = [
+				"type"=>"audio",
+				"originalContentUrl"=>"https://example.com/original.m4a",
+				"duration"=>240000
+				];
+			}else if((eregi ( "location", $text, $regs ))or(eregi ( "ที่อยู่", $text, $regs ))){
+				$messages = [
+					"type"=>"location",
+					"title"=>"my location",
+					"address"=>"〒150-0002 東京都渋谷区渋谷２丁目２１−１",
+					"latitude"=>35.65910807942215,
+					"longitude"=>139.70372892916203
+				];
+			}else if((eregi ( "sticker", $text, $regs ))or(eregi ( "สติ๊กเกอร์", $text, $regs ))){
+				$messages = [
+					"type"=>"sticker",
+					"packageId"=>"1",
+					"stickerId"=>"1"
+				];
 			}else{
-				$m_type='text';
-				$msg='ขออภัยครับ ไม่มีในคำหลัก ลองพิมพ์มาใหม่นะครับ';
+				'type'=>'text';
+				'text'=>'ขออภัยครับ ไม่มีในคำหลัก ลองพิมพ์มาใหม่นะครับ';
 			}
 			
 			// Build message to reply back
-			$messages = [
-				'type' => $m_type,
-				'text' => $msg
+// 			$messages = [
+// 				'type' => $m_type,
+// 				'text' => $msg
 				
 // 				"type"=>"image",
 // 				"originalContentUrl"=>"https://example.com/original.jpg",
@@ -84,7 +118,7 @@ if (!is_null($events['events'])) {
 				
 				
 				
-			];
+// 			];
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
