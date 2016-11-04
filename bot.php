@@ -62,6 +62,13 @@ if (!is_null($events['events'])) {
 					"packageId"=>"1",
 					"stickerId"=>"1"
 				];
+				
+			}else if(eregi ( "test", $text, $regs )){
+				$test = file_get_contents('http://202.28.37.32/smartcsmju/test_connect.php');
+				$messages = [
+					'type'=>'text',
+					'text'=>$test
+				];
 			}else if((eregi ( "weather", $text, $regs ))or(eregi ( "สภาพอากาศ", $text, $regs ))){
 				$messages = [
 					"type"=>"template",
