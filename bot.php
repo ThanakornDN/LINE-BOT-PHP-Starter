@@ -67,7 +67,7 @@ if (!is_null($events['events'])) {
 				$test = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/connect.php');
 				$messages = [
 					'type'=>'text',
-					'text'=>"จำนวนข้อมูลทั้งหมด :".$test;
+					'text'=>$test;
 				];
 			}else if((eregi ( "weather", $text, $regs ))or(eregi ( "สภาพอากาศ", $text, $regs ))){
 				$messages = [
