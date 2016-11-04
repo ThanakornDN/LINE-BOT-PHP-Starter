@@ -48,7 +48,7 @@ if (!is_null($events['events'])) {
 					"originalContentUrl"=>"https://example.com/original.m4a",
 					"duration"=>240000
 				];
-			}else if((eregi ( "location", $text, $regs ))or(eregi ( "ที่อยู่", $text, $regs ))){
+			}else if((eregi ( "location", $text, $regs ))or(eregi ( "พิกัด", $text, $regs ))){
 				$messages = [
 					"type"=>"location",
 					"title"=>"my location",
