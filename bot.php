@@ -63,9 +63,9 @@ if (!is_null($events['events'])) {
 					"stickerId"=>"1"
 				];
 				
-			}else if(eregi ( "test", $text, $regs )){
+			}else if(eregi ( "counter", $text, $regs )){
 				$test = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/connect.php');
-				$msg = "จำนวนข้อมูลทั้งหมด".$test;
+				$msg = "จำนวนข้อมูลทั้งหมด :".$test;
 				$messages = [
 					'type'=>'text',
 					'text'=>$msg
