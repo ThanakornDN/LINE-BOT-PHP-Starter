@@ -24,7 +24,7 @@ if (!is_null($events['events'])) {
 					'type'=>'text',
 					'text'=>'สวัสดีครับ'
 				];
-			}else if(eregi( "faucet", $text, $regs )){
+			}else if( (eregi ( "faucet", $text, $regs ))or(eregi ( "ก๊อกน้ำ", $text, $regs )) ){
 				$messages = [
 					'type'=>'text',
 					'text' =>'เข้าไปดูได้ตามลิ้งค์นี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php'
