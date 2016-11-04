@@ -42,7 +42,7 @@ if (!is_null($events['events'])) {
 					"previewImageUrl"=>"https://www.youtube.com/watch?v=d2Kj7YybM5o"
 				];	
 				
-			}else if((eregi ( "audio", $text, $regs ))or(eregi ( "ฟังเสียง", $text, $regs ))){
+			}else if((eregi ( "audio", $text, $regs ))or(eregi ( "เสียง", $text, $regs ))){
 				$messages = [
 					"type"=>"audio",
 					"originalContentUrl"=>"https://example.com/original.m4a",
