@@ -1,6 +1,6 @@
 <?php
 $access_token = 'VlxSZTyumW3qJsUKMnKOTLdqRd7chFWFJARPb7ZB/n3Lzf/lntpuOwBiLNieMReH3aFrT4MoAEWCdFruNp/7VHg3RkM1ja3AUtYVlDabJUgo6wAKsQyrZVo9Vxq+/py7le7bLr6ZDSp6qQHy0RiI2gdB04t89/1O/w1cDnyilFU=';
-$msg="OK";
+$msg="";
 $m_type="";
 $regs="";
 
@@ -64,10 +64,10 @@ if (!is_null($events['events'])) {
 				];
 				
 			}else if(eregi ( "test", $text, $regs )){
-				$test = file_get_contents('http://202.28.37.32/smartcsmju/test_connect.php');
+				$test = file_get_contents('http://202.28.37.32/smartcsmju/connect.php');
 				$messages = [
 					'type'=>'text',
-					'text'=>$test
+					'text'=>"จำนวนแถวทั้งหมด :".$test;
 				];
 			}else if((eregi ( "weather", $text, $regs ))or(eregi ( "สภาพอากาศ", $text, $regs ))){
 				$messages = [
