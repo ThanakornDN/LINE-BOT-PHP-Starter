@@ -64,7 +64,7 @@ if (!is_null($events['events'])) {
 				];
 				
 			}else if(eregi ( "test", $text, $regs )){
-				$test = file_get_contents('http://202.28.37.32/smartcsmju/connect.php');
+				$test = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/connect.php');
 				$messages = [
 					'type'=>'text',
 					'text'=>"จำนวนแถวทั้งหมด :".$test;
