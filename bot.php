@@ -129,7 +129,7 @@ if (!is_null($events['events'])) {
 					  "altText"=>"this is a confirm template",
 					  "template"=>[
 					      "type"=>"confirm",
-					      "text"=>$text+"Are you sure?",
+					      "text"=>$text."Are you sure?",
 					      "actions"=> [
 						  [
 						    "type"=>"message",
