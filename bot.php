@@ -98,27 +98,6 @@ if (!is_null($events['events'])) {
 					    ]
 					]
 				];
-			}else if((eregi ( "confirm", $text, $regs ))or(eregi ( "ยืนยัน", $text, $regs ))){
-				$messages = [
-					  "type"=>"template",
-					  "altText"=>"this is a confirm template",
-					  "template"=>[
-					      "type"=>"confirm",
-					      "text"=>"Are you sure?",
-					      "actions"=> [
-						  [
-						    "type"=>"message",
-						    "label"=>"Yes",
-						    "text"=>"yes"
-						  ],
-						  [
-						    "type"=>"message",
-						    "label"=>"No",
-						    "text"=>"no"
-						  ]
-					      ]
-					]
-				];
 			}else if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
 				$msg_split = explode("$regs",$text);
 				$msg1=$msg_split[0]; 
@@ -129,7 +108,7 @@ if (!is_null($events['events'])) {
 					  "altText"=>"this is a confirm template",
 					  "template"=>[
 					      "type"=>"confirm",
-					      "text"=>$text."Are you sure?",
+					      "text"=>"ยืนยันว่า ".$text." ใช่ไหม?",
 					      "actions"=> [
 						  [
 						    "type"=>"message",
