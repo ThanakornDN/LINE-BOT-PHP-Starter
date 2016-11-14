@@ -102,13 +102,14 @@ if (!is_null($events['events'])) {
 				$msg_split = explode("$regs",$text);
 				$msg1=$msg_split[0]; 
 				$msg2=$msg_split[1];
+				$msg_check = "ยืนยันว่า ".$text." ใช่ไหม?";
 				
 				$messages = [
 					  "type"=>"template",
 					  "altText"=>"this is a confirm template",
 					  "template"=>[
 					      "type"=>"confirm",
-					      "text"=>"ยืนยันว่า ".$text." ใช่ไหม?",
+					      "text"=>$msg_check,
 					      "actions"=> [
 						  [
 						    "type"=>"message",
