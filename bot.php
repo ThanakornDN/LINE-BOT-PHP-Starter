@@ -125,7 +125,6 @@ if (!is_null($events['events'])) {
 						  [
 						    "type"=>"message",
 						    "label"=>"No3",
-						    "text"=>"no3"
 						  ]
 					      ]
 					]
