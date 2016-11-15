@@ -114,12 +114,12 @@ if (!is_null($events['events'])) {
 					      "actions"=> [
 						  [
 						    "type"=>"message",
-						    "label"=>"Yes"
+						    "label"=>"Yes",
 						    "text"=>"yes"
 						  ],
 						  [
 						    "type"=>"message",
-						    "label"=>"No"
+						    "label"=>"No",
 						    "text"=>"no"
 						  ]
 					      ]
