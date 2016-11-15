@@ -114,21 +114,24 @@ if (!is_null($events['events'])) {
 					      "actions"=> [
 						  [
 						    "type"=>"message",
-						    "label"=>"Yes1"
-						    //"text"=>"yes2"
+						    "label"=>"Yes"
+						    "text"=>"yes"
 						  ],
 						  [
 						    "type"=>"message",
-						    "label"=>"No1"
-						    //"text"=>"no2"
+						    "label"=>"No"
+						    "text"=>"no"
 						  ]
 					      ]
 					]
 				];
+			}else if((eregi ( "ใช่", $text, $regs ))or(eregi ( "ตกลง", $text, $regs ))or(eregi ( "yes", $text, $regs ))or(eregi ( "ok", $text, $regs ))){
 			}else{
 				$messages = [
-					'type'=>'text',
-					'text'=>$text.' คืออะไรหรอครับ ?'
+					"id"=>"325708",
+					"type"=>"sticker",
+					"packageId"=>"1",
+					"stickerId"=>"1"
 				];
 			}
 
