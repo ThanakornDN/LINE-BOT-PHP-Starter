@@ -99,7 +99,7 @@ if (!is_null($events['events'])) {
 // 					]
 // 				];
 			$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_ans.php?msg='.$text);
-			if($s_ans=="NULL"){	
+			if($s_ans!="NULL"){	
 				$messages = [
 					'type'=>'text',
 					'text'=>$s_ans
