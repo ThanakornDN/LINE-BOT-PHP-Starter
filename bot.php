@@ -126,12 +126,16 @@ if (!is_null($events['events'])) {
 					]
 				];
 			}else if((eregi ( "ใช่", $text, $regs ))or(eregi ( "ตกลง", $text, $regs ))or(eregi ( "yes", $text, $regs ))or(eregi ( "ok", $text, $regs ))){
-			}else{
 				$messages = [
 					"id"=>"325708",
 					"type"=>"sticker",
 					"packageId"=>"1",
 					"stickerId"=>"1"
+				];
+			}else{
+				$messages = [
+					'type'=>'text',
+					'text'=>$text.' คืออะไรหรอครับ ?'
 				];
 			}
 
