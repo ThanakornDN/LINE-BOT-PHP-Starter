@@ -42,8 +42,8 @@ if (!is_null($events['events'])) {
 						  [
 						    "type"=>"message",
 						    "label"=>"Yes",
-						    //"text"=>"yes"
-							//file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$msg_split);
+						    "text"=>"yes"
+						    //file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$msg_split);
 							  
 						  ],
 						  [
