@@ -28,11 +28,11 @@ if (!is_null($events['events'])) {
 						'text'=>$s_ans
 					];
 			}else if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
-				$msg_split = explode("$regs",$text);
+				$msg_split = explode($regs[0],$text);
 				$msg1=$msg_split[0]; 
 				$msg2=$msg_split[1];
 				$msg_check = "แน่ใจนะว่า ".$text." ?";
-				$test_insert = $regs."|".$msg2;
+				$test_insert = $msg1."|".$msg2;
 				file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$test_insert);
 				
 				$messages = [
