@@ -131,8 +131,7 @@ if (!is_null($events['events'])) {
 					      ]
 					]
 				];
-			}
-			else if((eregi ( "ใช่", $text, $regs ))or(eregi ( "ตกลง", $text, $regs ))or(eregi ( "yes", $text, $regs ))or(eregi ( "ok", $text, $regs ))){
+			}else if((eregi ( "ใช่", $text, $regs ))or(eregi ( "ตกลง", $text, $regs ))or(eregi ( "yes", $text, $regs ))or(eregi ( "ok", $text, $regs ))){
 				$messages = [
 					"id"=>"325708",
 					"type"=>"sticker",
