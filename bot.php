@@ -26,6 +26,11 @@ if (!is_null($events['events'])) {
 						'type'=>'text',
 						'text'=>$s_ans
 					];
+			}else if(empty($s_ans)){
+					$messages = [
+						'type'=>'text',
+						'text'=>$text.' คืออะไรหรอครับ ?'
+					];
 // 				if($s_an){	
 // 					$messages = [
 // 						'type'=>'text',
