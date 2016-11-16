@@ -67,10 +67,8 @@ if (!is_null($events['events'])) {
 				];
 				}else{
 				$messages = [
-					"id"=>"325708",
-					"type"=>"sticker",
-					"packageId"=>"2",
-					"stickerId"=>"2"
+					'type'=>'text',
+					'text'='Error'
 				];
 				}
 			}else{
