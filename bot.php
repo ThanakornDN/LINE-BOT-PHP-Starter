@@ -21,18 +21,12 @@ if (!is_null($events['events'])) {
 
 			
 			$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_ans.php?msg='.$text);
-			if(!eregi ( "S1",$s_ans, $regs )){
+			if(!eregi ( "S0",$s_ans, $regs )){
 					$messages = [
 						'type'=>'text',
 						'text'=>$s_ans
 					];
-// 			}else if($s_ans=='S1'){
-// 					$messages = [
-// 						'type'=>'text',
-// 						'text'=>$text.' คืออะไรหรอครับ ?'
-// 					];
 			}else if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
-// 			if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
 				$msg_split = explode("$regs",$text);
 				$msg1=$msg_split[0]; 
 				$msg2=$msg_split[1];
@@ -48,7 +42,9 @@ if (!is_null($events['events'])) {
 						  [
 						    "type"=>"message",
 						    "label"=>"Yes",
-						    "text"=>"yes"
+						    //"text"=>"yes"
+							file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$msg_split);
+							  
 						  ],
 						  [
 						    "type"=>"message",
