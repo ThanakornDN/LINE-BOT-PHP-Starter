@@ -18,100 +18,22 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
+
 			
-// 			if ( (eregi ( "สวัสดี", $text, $regs ))or(eregi ( "Hello", $text, $regs )) ){
-// 				$messages = [
-// 					'type'=>'text',
-// 					'text'=>'สวัสดีครับ'
-// 				];
-// 			}else if( (eregi ( "faucet", $text, $regs ))or(eregi ( "ก๊อกน้ำ", $text, $regs )) ){
-// 				$messages = [
-// 					'type'=>'text',
-// 					'text' =>'เข้าไปดูได้ตามลิ้งค์นี้เลยครับ URL:http://202.28.37.32/smartcsmju/SmartFaucet/index.php'
-// 				];
-// 			}else if( (eregi ( "image", $text, $regs ))or(eregi ( "รูป", $text, $regs )) ){
-// 				$messages = [
-// 					"type"=>"image",
-// 					"originalContentUrl"=>"https://example.com/original.jpg",
-// 					"previewImageUrl"=>"https://example.com/preview.jpg"
-// 				];
-// 			}else if((eregi ( "video", $text, $regs ))or(eregi ( "วีดีโอ", $text, $regs ))){
-// 				$messages = [
-// 					"type"=>"video",
-// 					"originalContentUrl"=>"https://www.youtube.com/watch?v=d2Kj7YybM5o",
-// 					"previewImageUrl"=>"https://www.youtube.com/watch?v=d2Kj7YybM5o"
-// 				];	
-				
-// 			}else if((eregi ( "audio", $text, $regs ))or(eregi ( "เสียง", $text, $regs ))){
-// 				$messages = [
-// 					"type"=>"audio",
-// 					"originalContentUrl"=>"https://example.com/original.m4a",
-// 					"duration"=>240000
-// 				];
-// 			}else if((eregi ( "location", $text, $regs ))or(eregi ( "พิกัด", $text, $regs ))){
-// 				$messages = [
-// 					"type"=>"location",
-// 					"title"=>"my location",
-// 					"address"=>"〒150-0002 東京都渋谷区渋谷２丁目２１−１",
-// 					"latitude"=>35.65910807942215,
-// 					"longitude"=>139.70372892916203
-// 				];
-// 			}else if((eregi ( "sticker", $text, $regs ))or(eregi ( "สติ๊กเกอร์", $text, $regs ))){
-// 				$messages = [
-// 					"type"=>"sticker",
-// 					"packageId"=>"1",
-// 					"stickerId"=>"1"
-// 				];
-				
-// 			}else if(eregi ( "counter", $text, $regs )){
-// 				$test = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/connect.php?msg=0');
-// 				$msg = "จำนวนข้อมูลทั้งหมด :".$test;
-// 				$messages = [
-// 					'type'=>'text',
-// 					'text'=>$msg
-// 				];
-// 			}else if((eregi ( "weather", $text, $regs ))or(eregi ( "สภาพอากาศ", $text, $regs ))){
-// 				$messages = [
-// 					"type"=>"template",
-// 					"altText"=>"this is a buttons template",
-// 					"template"=>[
-// 					    "type"=>"buttons",
-// 					    "thumbnailImageUrl"=>"https://example.com/bot/images/image.jpg",
-// 					    "title"=>"Menu",
-// 					    "text"=>"Please select",
-// 					    "actions"=> [
-// 						[
-// 						  "type"=> "postback",
-// 						  "label"=> "Buy",
-// 						  "data"=> "action=buy&itemid=123"
-// 						],
-// 						[
-// 						  "type"=> "postback",
-// 						  "label"=> "Add to cart",
-// 						  "data"=> "action=add&itemid=123"
-// 						],
-// 						[
-// 						  "type"=> "uri",
-// 						  "label"=> "View detail",
-// 						  "uri"=> "http://example.com/page/123"
-// 						]
-// 					    ]
-// 					]
-// 				];
 			$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_ans.php?msg='.$text);
 			if(!empty($s_ans)){	
 				$messages = [
 					'type'=>'text',
 					'text'=>$s_ans
 				];
-			}else if(empty($s_ans){
-				$messages = [
-					'type'=>'text',
-					'text'=>$text.' คืออะไรหรอครับ ?'
-				];
-			}
-			//}else if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
-			if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
+// 			}else if(empty($s_ans){
+// 				$messages = [
+// 					'type'=>'text',
+// 					'text'=>$text.' คืออะไรหรอครับ ?'
+// 				];
+// 			}
+			}else if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
+// 			if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
 				$msg_split = explode("$regs",$text);
 				$msg1=$msg_split[0]; 
 				$msg2=$msg_split[1];
@@ -144,13 +66,12 @@ if (!is_null($events['events'])) {
 					"packageId"=>"1",
 					"stickerId"=>"1"
 				];
+			}else{
+				$messages = [
+					'type'=>'text',
+					'text'=>$text.' คืออะไรหรอครับ ?'
+				];
 			}
-// 			else{
-// 				$messages = [
-// 					'type'=>'text',
-// 					'text'=>$text.' คืออะไรหรอครับ ?'
-// 				];
-// 			}
 
 
 			// Make a POST Request to Messaging API to reply to sender
