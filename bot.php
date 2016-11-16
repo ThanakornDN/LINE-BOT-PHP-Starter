@@ -99,18 +99,19 @@ if (!is_null($events['events'])) {
 // 					]
 // 				];
 			$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_ans.php?msg='.$text);
-			if($s_ans!="S0"){	
+			if($s_ans!=""){	
 				$messages = [
 					'type'=>'text',
 					'text'=>$s_ans
 				];
-			}else if($s_ans=="S0"){
+			}else if($s_ans==""){
 				$messages = [
 					'type'=>'text',
 					'text'=>$text.' คืออะไรหรอครับ ?'
 				];
-			}else if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
-//			if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
+			}
+			//}else if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
+			if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
 				$msg_split = explode("$regs",$text);
 				$msg1=$msg_split[0]; 
 				$msg2=$msg_split[1];
@@ -143,12 +144,13 @@ if (!is_null($events['events'])) {
 					"packageId"=>"1",
 					"stickerId"=>"1"
 				];
-			}else{
-				$messages = [
-					'type'=>'text',
-					'text'=>$text.' คืออะไรหรอครับ ?'
-				];
 			}
+// 			else{
+// 				$messages = [
+// 					'type'=>'text',
+// 					'text'=>$text.' คืออะไรหรอครับ ?'
+// 				];
+// 			}
 
 
 			// Make a POST Request to Messaging API to reply to sender
