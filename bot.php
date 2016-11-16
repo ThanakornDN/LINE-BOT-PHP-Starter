@@ -45,8 +45,6 @@ if (!is_null($events['events'])) {
 						    "type"=>"message",
 						    "label"=>"Yes",
 						    "text"=>"yes"
-						    //file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$msg_split);
-							  
 						  ],
 						  [
 						    "type"=>"message",
@@ -58,16 +56,21 @@ if (!is_null($events['events'])) {
 				];
 			}else if((eregi ( "ใช่", $text, $regs ))or(eregi ( "ตกลง", $text, $regs ))or(eregi ( "yes", $text, $regs ))or(eregi ( "ok", $text, $regs ))){
 				if($ans_state==1){
-					file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$msg1.'|'.$msg2);
+					$test_insert = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$msg1.'|'.$msg2);
 					$ans_state=0;
-				}
-				
+					
 				$messages = [
 					"id"=>"325708",
 					"type"=>"sticker",
 					"packageId"=>"1",
 					"stickerId"=>"1"
 				];
+				}else{
+				$messages = [
+					'type'=>'text',
+					'text'=>'Error'
+				];
+				}
 			}else{
 				$messages = [
 					'type'=>'text',
