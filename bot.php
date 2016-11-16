@@ -21,12 +21,12 @@ if (!is_null($events['events'])) {
 
 			
 			$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_ans.php?msg='.$text);
-			if(!empty($s_ans)){
+			if($s_ans!='S1'){
 					$messages = [
 						'type'=>'text',
 						'text'=>$s_ans
 					];
-			}else if(empty($s_ans)){
+			}else if($s_ans=='S1'){
 					$messages = [
 						'type'=>'text',
 						'text'=>$text.' คืออะไรหรอครับ ?'
