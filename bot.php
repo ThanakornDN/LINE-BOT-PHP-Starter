@@ -21,19 +21,20 @@ if (!is_null($events['events'])) {
 
 			
 			$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_ans.php?msg='.$text);
-			if($s_ans!="NN"){	
-				$messages = [
-					'type'=>'text',
-					'text'=>$s_ans
-				];
-			}else if($s_ans=="NN"){
-				$messages = [
-					'type'=>'text',
-					'text'=>$text.' คืออะไรหรอครับ ?'
-				];
-// 			}
-			}else if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
-// 			if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
+			if(!empty($s_ans)){
+				if($s_ans=="NN"){	
+					$messages = [
+						'type'=>'text',
+						'text'=>$text.' คืออะไรหรอครับ ?'
+					];
+				}else{
+					$messages = [
+						'type'=>'text',
+						'text'=>$s_ans
+					];
+				}
+// 			}else if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
+			if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
 				$msg_split = explode("$regs",$text);
 				$msg1=$msg_split[0]; 
 				$msg2=$msg_split[1];
