@@ -32,7 +32,8 @@ if (!is_null($events['events'])) {
 				$msg1=$msg_split[0]; 
 				$msg2=$msg_split[1];
 				$msg_check = "แน่ใจนะว่า ".$text." ?";
-				$ans_state=1;
+				//$test_insert = 
+				file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$msg1.'|'.$msg2);
 				
 				$messages = [
 					  "type"=>"template",
@@ -55,22 +56,12 @@ if (!is_null($events['events'])) {
 					]
 				];
 			}else if((eregi ( "ใช่", $text, $regs ))or(eregi ( "ตกลง", $text, $regs ))or(eregi ( "yes", $text, $regs ))or(eregi ( "ok", $text, $regs ))){
-				if($ans_state==1){
-					$test_insert = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$msg1.'|'.$msg2);
-					$ans_state=0;
-					
 				$messages = [
 					"id"=>"325708",
 					"type"=>"sticker",
 					"packageId"=>"1",
 					"stickerId"=>"1"
 				];
-				}else{
-				$messages = [
-					'type'=>'text',
-					'text'='Error'
-				];
-				}
 			}else{
 				$messages = [
 					'type'=>'text',
