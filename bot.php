@@ -26,11 +26,11 @@ if (!is_null($events['events'])) {
 					'type'=>'text',
 					'text'=>$s_ans
 				];
-// 			}else if(empty($s_ans){
-// 				$messages = [
-// 					'type'=>'text',
-// 					'text'=>$text.' คืออะไรหรอครับ ?'
-// 				];
+			}else if(empty($s_ans){
+				$messages = [
+					'type'=>'text',
+					'text'=>$text.' คืออะไรหรอครับ ?'
+				];
 // 			}
 			}else if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
 // 			if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))){
