@@ -106,7 +106,7 @@ if (!is_null($events['events'])) {
 						  [
 						    "type"=>"message",
 						    "label"=>"เพิ่มคำตอบ...",
-						    //"text"=>"yes"
+						    "text"=>"yes"
 						  ]
 					      ]
 					]
