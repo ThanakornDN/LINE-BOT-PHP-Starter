@@ -16,7 +16,7 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			
 		    //public function replyText($event);
-			$data = public function replyText($event);
+			$data = replyText($event);
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			
 			$post = json_encode($data);
