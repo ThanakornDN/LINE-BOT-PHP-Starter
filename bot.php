@@ -108,7 +108,7 @@ if (!is_null($events['events'])) {
 						  [
 						    "type"=>"postback",
 						    "label"=>"Add",
-						    "data"=>"action=http://202.28.37.32/smartcsmju/LineAPI/test_insert_user_msg.php"
+						    "data"=>"action=add1()"
 						  ],
 						  [
 						    "type"=>"uri",
@@ -144,6 +144,11 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 		}
 	}
+}
+
+function add1()
+{
+file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg=111');
 }
 echo "OK";
 
