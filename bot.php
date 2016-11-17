@@ -1,4 +1,7 @@
 <?php
+
+
+
 $access_token = 'VlxSZTyumW3qJsUKMnKOTLdqRd7chFWFJARPb7ZB/n3Lzf/lntpuOwBiLNieMReH3aFrT4MoAEWCdFruNp/7VHg3RkM1ja3AUtYVlDabJUgo6wAKsQyrZVo9Vxq+/py7le7bLr6ZDSp6qQHy0RiI2gdB04t89/1O/w1cDnyilFU=';
 $msg="";
 $m_type="";
@@ -20,6 +23,10 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
+			if($ans_state==1){
+				file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$text);
+			}
+			$ans_state=1;
 			
 			$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_ans.php?msg='.$text);
 			if(!eregi ( "S0",$s_ans, $regs )){
@@ -108,7 +115,7 @@ if (!is_null($events['events'])) {
 						  [
 						    "type"=>"postback",
 						    "label"=>"Add",
-						    "data"=>"action=add1()"
+						    "data"=>"action=010"
 						  ],
 						  [
 						    "type"=>"uri",
