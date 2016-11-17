@@ -56,6 +56,35 @@ if (!is_null($events['events'])) {
 					      ]
 					]
 				];
+			}else if((eregi ( "ตอบว่า", $text, $regs ))or(eregi ( "ตอบ", $text, $regs ))){
+				$msg_split = explode($regs[0],$text);
+				$msg1=$msg_split[0]; 
+				$msg2=$msg_split[1];
+				$msg_check = "แน่ใจนะว่า ".$text." ?";
+				$test_insert = $msg1."|".$msg2;
+				
+				file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.urlencode($test_insert));
+				
+				$messages = [
+					  "type"=>"template",
+					  "altText"=>"this is a confirm template",
+					  "template"=>[
+					      "type"=>"confirm",
+					      "text"=>$msg_check,
+					      "actions"=> [
+						  [
+						    "type"=>"message",
+						    "label"=>"Yes",
+						    "text"=>"yes"
+						  ],
+						  [
+						    "type"=>"message",
+						    "label"=>"No",
+						    "text"=>"no"
+						  ]
+					      ]
+					]
+				];
 			}else if((eregi ( "ใช่", $text, $regs ))or(eregi ( "ตกลง", $text, $regs ))or(eregi ( "yes", $text, $regs ))or(eregi ( "ok", $text, $regs ))){
 				$messages = [
 					"id"=>"325708",
