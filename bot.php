@@ -112,7 +112,7 @@ if (!is_null($events['events'])) {
 						  ],
 						  [
 						    "type"=>"uri",
-						    "label"=>"เพิ่ม",
+						    "label"=>"เพิ่มคำตอบ อื่น..",
 						    "uri"=>"http://202.28.37.32/smartcsmju/LineAPI/test_insert_user_msg.php"
 						  ]
 					      ]
