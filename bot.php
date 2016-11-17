@@ -107,11 +107,6 @@ if (!is_null($events['events'])) {
 					      "actions"=>[
 						  [
 						    "type"=>"postback",
-						    "label"=>"Buy",
-						    "data"=>"action=buy&itemid=123"
-						  ],
-						  [
-						    "type"=>"postback",
 						    "label"=>"Add",
 						    "data"=>"action=http://202.28.37.32/smartcsmju/LineAPI/test_insert_user_msg.php"
 						  ],
