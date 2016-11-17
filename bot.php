@@ -94,19 +94,22 @@ if (!is_null($events['events'])) {
 				];
 			}else{
 				$msg_check =$text."ต้องตอบว่าไงดี ?";
-				file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$test_insert);
+				//file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$test_insert);
 				
 				$messages = [
 					  "type"=>"template",
 					  "altText"=>"this is a confirm template",
 					  "template"=>[
-					      "type"=>"confirm",
+					      "type"=>"buttons",
 					      "text"=>$msg_check,
 					      "actions"=> [
 						  [
-						    "type"=>"message",
-						    "label"=>"เพิ่มคำตอบ...",
-						    "text"=>"yes"
+// 						    "type"=>"message",
+// 						    "label"=>"เพิ่มคำตอบ...",
+// 						    "text"=>"yes"
+						    "type"=>"uri",
+						    "label">"เพิ่มคำตอบ...",
+						    "uri"=>'http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.'Hi'
 						  ]
 					      ]
 					]
