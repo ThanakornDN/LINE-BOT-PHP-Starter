@@ -112,8 +112,8 @@ if (!is_null($events['events'])) {
 						  ],
 						  [
 						    "type"=>"postback",
-						    "label"=>"Add to cart",
-						    "data"=>"action=add&itemid=123"
+						    "label"=>"Add",
+						    "data"=>"action=http://202.28.37.32/smartcsmju/LineAPI/test_insert_user_msg.php"
 						  ],
 						  [
 						    "type"=>"uri",
