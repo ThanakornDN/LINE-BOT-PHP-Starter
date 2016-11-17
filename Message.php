@@ -14,18 +14,46 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-namespace LINE\LINEBot;
+namespace LINE\LINEBot\MessageBuilder;
+use LINE\LINEBot\Constant\MessageType;
+use LINE\LINEBot\MessageBuilder;
 /**
- * The interface that has a responsibility to build message.
+ * A builder class for text message.
  *
- * @package LINE\LINEBot
+ * @package LINE\LINEBot\MessageBuilder
  */
-interface MessageBuilder
+class TextMessageBuilder implements MessageBuilder
 {
+    /** @var string[] */
+    private $texts;
+    /** @var array */
+    private $message = [];
     /**
-     * Builds message structure.
+     * TextMessageBuilder constructor.
      *
-     * @return array Built message structure.
+     * @param string $text
+     * @param string[] $extraTexts
      */
-    public function buildMessage();
+    public function __construct($text, ...$extraTexts)
+    {
+        $this->texts = array_merge([$text], $extraTexts);
+    }
+    /**
+     * Builds text message structure.
+     *
+     * @return array
+     */
+    public function buildMessage()
+    {
+        if (!empty($this->message)) {
+            return $this->message;
+        }
+        foreach ($this->texts as $text) {
+            $this->message[] = [
+                'type' => MessageType::TEXT,
+                'text' => $text,
+            ];
+        }
+        return $this->message;
+    }
 }
