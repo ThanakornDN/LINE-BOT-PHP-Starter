@@ -83,7 +83,7 @@ public function replyText($event){
 				'messages' => [$messages],
 			];
       
-      return $this->replyMessage($data);
+      return $this->$data;
 }
 
 ?>
