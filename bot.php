@@ -101,7 +101,7 @@ if (!is_null($events['events'])) {
 					  "altText"=>"this is a buttons template",
 					  "template"=>[
 					      "type"=>"buttons",
-					      "text"=>"Please select",
+					      "text"=>$msg_check,
 					      "actions"=>[
 						  [
 						    "type"=>"postback",
@@ -115,8 +115,8 @@ if (!is_null($events['events'])) {
 						  ],
 						  [
 						    "type"=>"uri",
-						    "label"=>"View detail",
-						    "uri"=>"http://example.com/page/123"
+						    "label"=>"เพิ่ม",
+						    "uri"=>"http://202.28.37.32/smartcsmju/LineAPI/test_insert.php"
 						  ]
 					      ]
 					  ]
