@@ -93,6 +93,8 @@ if (!is_null($events['events'])) {
 					"stickerId"=>"1"
 				];
 			}else{
+				
+				$test_insert = "Hi|Hi";
 				$msg_check =$text."ต้องตอบว่าไงดี ?";
 				//file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$test_insert);
 				
@@ -116,7 +118,7 @@ if (!is_null($events['events'])) {
 						  [
 						    "type"=>"uri",
 						    "label"=>"เพิ่ม",
-						    "uri"=>"http://202.28.37.32/smartcsmju/LineAPI/test_insert_user_msg.php"
+						    "uri"=>"http://202.28.37.32/smartcsmju/LineAPI/test_insert_user_msg.php?msg=".$test_insert
 						  ]
 					      ]
 					  ]
