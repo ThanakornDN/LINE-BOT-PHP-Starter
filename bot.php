@@ -65,7 +65,7 @@ if (!is_null($events['events'])) {
 			}else{
 				$messages = [
 					'type'=>'text',
-					'text'=>$text.' คืออะไรหรอครับ ?'
+					'text'=>$text.' ต้องตอบว่าไงดี ?'
 				];
 			}
 
