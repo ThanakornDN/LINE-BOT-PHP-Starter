@@ -101,8 +101,6 @@ if (!is_null($events['events'])) {
 					  "altText"=>"this is a buttons template",
 					  "template"=>[
 					      "type"=>"buttons",
-					      "thumbnailImageUrl"=>"https://example.com/bot/images/image.jpg",
-					      "title"=>"Menu",
 					      "text"=>"Please select",
 					      "actions"=>[
 						  [
