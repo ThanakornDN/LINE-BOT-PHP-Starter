@@ -98,30 +98,21 @@ if (!is_null($events['events'])) {
 				
 				$messages = [
 					  "type"=>"template",
-					  "altText"=>"this is a confirm template",
+					  "altText"=>"this is a buttons template",
 					  "template"=>[
 					      "type"=>"buttons",
 					      "text"=>$msg_check,
 					      "actions"=> [
 						  [
-// 						    "type"=>"message",
-// 						    "label"=>"เพิ่มคำตอบ...",
-// 						    "text"=>"yes"
 						    "type"=>"uri",
 						    "label">"เพิ่มคำตอบ...",
-						    "uri"=>'http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.'Hi'
+						    "uri"=>'http://202.28.37.32/smartcsmju/LineAPI/test_insert.php'
 						  ]
 					      ]
 					]
 				];
 			}
-// 			else{
-// 				file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert_user_msg.php?msg='.$text);
-// 				$messages = [
-// 					'type'=>'text',
-// 					'text'=>$text.' ต้องตอบว่าไงดี ?'
-// 				];
-// 			}
+
 
 
 			// Make a POST Request to Messaging API to reply to sender
