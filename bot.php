@@ -29,13 +29,13 @@ if (!is_null($events['events'])) {
 			if(eregi ("S0",$stat_msg, $regs )){
 					$messages = [
 						'type'=>'text',
-						'text'=>$json_data['data'];
+						'text'=>$stat_msg
 					];
 			}else if(eregi ( "S1",$stat_msg, $regs )){
 				$messages = [
 
 						'type'=>'text',
-						'text'=>$msg_db
+						'text'=>$json_data['data'];
 // 					  "type"=>"template",
 // 					  "altText"=>"this is a buttons template",
 // 					  "template"=>[
