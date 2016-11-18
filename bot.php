@@ -66,7 +66,7 @@ if (!is_null($events['events'])) {
 				$msg2=$msg_split[1];
 				$msg_check = "แน่ใจนะว่า ".$text." ?";
 				$test_insert = urlencode($msg1."|".$msg2);
-				$test_m => 	[  
+				$test_m = 	[  
 						  [
 						    "type"=>"message",
 						    "label"=>"Yes",
