@@ -86,7 +86,7 @@ if (!is_null($events['events'])) {
 					  "template"=>[
 					      "type"=>"confirm",
 					      "text"=>$msg_check,
-					      "actions"=> [$test_m
+					      "actions"=> $test_m
 // 						  [
 // 						    "type"=>"message",
 // 						    "label"=>"Yes",
@@ -97,7 +97,7 @@ if (!is_null($events['events'])) {
 // 						    "label"=>"No",
 // 						    "text"=>"no"
 // 						  ],
-					      ]
+					      
 					]
 				];
 			}else if((eregi ( "ใช่", $text, $regs ))or(eregi ( "ตกลง", $text, $regs ))or(eregi ( "yes", $text, $regs ))or(eregi ( "ok", $text, $regs ))){
