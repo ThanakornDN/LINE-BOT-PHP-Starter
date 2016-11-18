@@ -33,16 +33,24 @@ if (!is_null($events['events'])) {
 					];
 			}else if(eregi ( "S1",$stat_msg, $regs )){
 				$messages = [
-
-						'type'=>'text',
-						'text'=>$msg_db
-// 					  "type"=>"template",
-// 					  "altText"=>"this is a buttons template",
-// 					  "template"=>[
-// 					      "type"=>"buttons",
-// 					      "text"=>$msg_check,
-// 					      "actions"=>$msg_db
-// 					  ]
+					  "type"=>"template",
+					  "altText"=>"this is a buttons template",
+					  "template"=>[
+					      "type"=>"buttons",
+					      "text"=>$msg_check,
+					      "actions"=>[
+						  [
+						    "type"=>"message",
+						    "label"=>"Yes",
+						    "text"=>"yes"
+						  ],
+						  [
+						    "type"=>"message",
+						    "label"=>"No",
+						    "text"=>"no"
+						  ]
+ 					      ]
+					  ]
 				];
 			}else if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))or(eregi ( "=>", $text, $regs ))){
 				$text_msg = urlencode($text);
