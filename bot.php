@@ -119,7 +119,28 @@ if (!is_null($events['events'])) {
 					"stickerId"=>"1"
 				];
 			}else{
-				
+				       $test_m = [  
+						  [
+						    "type"=>"message",
+						    "label"=>"Yes",
+						    "text"=>"yes"
+						  ],
+						  [
+						    "type"=>"message",
+						    "label"=>"No",
+						    "text"=>"no"
+						  ],
+						  [
+						    "type"=>"message",
+						    "label"=>"Yes",
+						    "text"=>"yes"
+						  ],
+						  [
+						    "type"=>"message",
+						    "label"=>"No",
+						    "text"=>"no"
+						  ]
+						];
 				$test_insert = "Hi|Hi";
 				$msg_check =$text."ต้องตอบว่าไงดี ?";
 				//file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$test_insert);
@@ -130,18 +151,19 @@ if (!is_null($events['events'])) {
 					  "template"=>[
 					      "type"=>"buttons",
 					      "text"=>$msg_check,
-					      "actions"=>[
-						  [
-						    "type"=>"postback",
-						    "label"=>"Add",
-						    "data"=>"action=010"
-						  ],
-						  [
-						    "type"=>"uri",
-						    "label"=>"เพิ่มคำตอบ อื่น..",
-						    "uri"=>"http://202.28.37.32/smartcsmju/LineAPI/test_insert_user_msg.php"
-						  ]
-					      ]
+					      "actions"=>$test_m
+// 						  [
+// 						  [
+// 						    "type"=>"postback",
+// 						    "label"=>"Add",
+// 						    "data"=>"action=010"
+// 						  ],
+// 						  [
+// 						    "type"=>"uri",
+// 						    "label"=>"เพิ่มคำตอบ อื่น..",
+// 						    "uri"=>"http://202.28.37.32/smartcsmju/LineAPI/test_insert_user_msg.php"
+// 						  ]
+// 					      ]
 					  ]
 				];
 			}
