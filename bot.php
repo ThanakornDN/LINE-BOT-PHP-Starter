@@ -28,12 +28,12 @@ if (!is_null($events['events'])) {
 			if(eregi ("S0",$stat_msg, $regs )){
 					$messages = [
 						'type'=>'text',
-						'text'=>'11'
+						'text'=>$stat_msg
 					];
 			}else if(eregi ( "S1",$stat_msg, $regs )){
 					$messages = [
 						'type'=>'text',
-						'text'=>'12'
+						'text'=>$stat_msg
 					];	
 			}else if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))or(eregi ( "=>", $text, $regs ))){
 				$text_msg = urlencode($text);
