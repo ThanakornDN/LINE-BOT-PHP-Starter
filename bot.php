@@ -29,7 +29,7 @@ if (!is_null($events['events'])) {
 			if(eregi ("S0",$stat_msg, $regs )){
 					$messages = [
 						'type'=>'text',
-						'text'=>$stat_msg
+						'text'=>$json_data['data'];
 					];
 			}else if(eregi ( "S1",$stat_msg, $regs )){
 				$messages = [
