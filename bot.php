@@ -20,10 +20,7 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
-			if($ans_state==1){
-				file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$text);
-			}
-			$ans_state=1;
+
 			
 			$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_ans.php?msg='.$text);
 			if(!eregi ( "S0",$s_ans, $regs )){
@@ -59,7 +56,7 @@ if (!is_null($events['events'])) {
 						    "type"=>"message",
 						    "label"=>"No",
 						    "text"=>"no"
-						  ]
+						  ],
 					      ]
 					]
 				];
