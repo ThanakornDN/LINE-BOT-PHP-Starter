@@ -90,28 +90,7 @@ if (!is_null($events['events'])) {
 				$msg2=$msg_split[1];
 				$msg_check = "แน่ใจนะว่า ".$text." ?";
 				$test_insert = urlencode($msg1."|".$msg2);
-				$test_m = 	[  
-						  [
-						    "type"=>"message",
-						    "label"=>"Yes",
-						    "text"=>"yes"
-						  ],
-						  [
-						    "type"=>"message",
-						    "label"=>"No",
-						    "text"=>"no"
-						  ],
-						  [
-						    "type"=>"message",
-						    "label"=>"Yes",
-						    "text"=>"yes"
-						  ],
-						  [
-						    "type"=>"message",
-						    "label"=>"No",
-						    "text"=>"no"
-						  ]
-						];
+
 				//file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$test_insert);
 				
 				$messages = [
@@ -141,54 +120,6 @@ if (!is_null($events['events'])) {
 					"type"=>"sticker",
 					"packageId"=>"1",
 					"stickerId"=>"1"
-				];
-			}else{
-				       $test_m = [  
-						  [
-						    "type"=>"message",
-						    "label"=>"Yes",
-						    "text"=>"yes"
-						  ],
-						  [
-						    "type"=>"message",
-						    "label"=>"No",
-						    "text"=>"no"
-						  ],
-						  [
-						    "type"=>"message",
-						    "label"=>"Yes",
-						    "text"=>"yes"
-						  ],
-						  [
-						    "type"=>"message",
-						    "label"=>"No",
-						    "text"=>"no"
-						  ]
-						];
-				$test_insert = "Hi|Hi";
-				$msg_check =$text."ต้องตอบว่าไงดี ?";
-				//file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$test_insert);
-				
-				$messages = [
-					  "type"=>"template",
-					  "altText"=>"this is a buttons template",
-					  "template"=>[
-					      "type"=>"buttons",
-					      "text"=>$msg_check,
-					      "actions"=>$test_m
-// 						  [
-// 						  [
-// 						    "type"=>"postback",
-// 						    "label"=>"Add",
-// 						    "data"=>"action=010"
-// 						  ],
-// 						  [
-// 						    "type"=>"uri",
-// 						    "label"=>"เพิ่มคำตอบ อื่น..",
-// 						    "uri"=>"http://202.28.37.32/smartcsmju/LineAPI/test_insert_user_msg.php"
-// 						  ]
-// 					      ]
-					  ]
 				];
 			}
 
