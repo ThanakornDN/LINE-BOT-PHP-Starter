@@ -139,6 +139,16 @@ if (!is_null($events['events'])) {
 						    "type"=>"message",
 						    "label"=>"No",
 						    "text"=>"no"
+						  ],
+						  [
+						    "type"=>"message",
+						    "label"=>"Yes",
+						    "text"=>"yes"
+						  ],
+						  [
+						    "type"=>"message",
+						    "label"=>"No",
+						    "text"=>"no"
 						  ]
 						];
 				$test_insert = "Hi|Hi";
