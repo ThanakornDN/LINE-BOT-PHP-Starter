@@ -25,16 +25,22 @@ if (!is_null($events['events'])) {
 			$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);
 			$json_data = json_decode($s_ans, true);
 			$stat_msg = $json_data['status'];
+			$msg_db = $json_data['data'];
 			if(eregi ("S0",$stat_msg, $regs )){
 					$messages = [
 						'type'=>'text',
 						'text'=>$stat_msg
 					];
 			}else if(eregi ( "S1",$stat_msg, $regs )){
-					$messages = [
-						'type'=>'text',
-						'text'=>$stat_msg
-					];	
+				$messages = [
+					  "type"=>"template",
+					  "altText"=>"this is a buttons template",
+					  "template"=>[
+					      "type"=>"buttons",
+					      "text"=>$msg_check,
+					      "actions"=>$msg_db
+					  ]
+				];
 			}else if((eregi ( "คือ", $text, $regs ))or(eregi ( "หมายถึง", $text, $regs ))or(eregi ( "=>", $text, $regs ))){
 				$text_msg = urlencode($text);
 				$sql_msg = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$text_msg);
