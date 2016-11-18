@@ -76,6 +76,16 @@ if (!is_null($events['events'])) {
 						    "type"=>"message",
 						    "label"=>"No",
 						    "text"=>"no"
+						  ],
+						  [
+						    "type"=>"message",
+						    "label"=>"Yes",
+						    "text"=>"yes"
+						  ],
+						  [
+						    "type"=>"message",
+						    "label"=>"No",
+						    "text"=>"no"
 						  ]
 						];
 				//file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg='.$test_insert);
