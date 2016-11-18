@@ -56,7 +56,7 @@ if (!is_null($events['events'])) {
 						    "type"=>"message",
 						    "label"=>"No",
 						    "text"=>"no"
-						  ],
+						  ]
 					      ]
 					]
 				];
@@ -85,7 +85,7 @@ if (!is_null($events['events'])) {
 						    "type"=>"message",
 						    "label"=>"No",
 						    "text"=>"no"
-						  ]
+						  ],
 					      ]
 					]
 				];
