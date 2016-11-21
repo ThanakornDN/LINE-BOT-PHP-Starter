@@ -25,19 +25,6 @@ if (!is_null($events['events'])) {
 						'type'=>'text',
 						'text'=>'Hi'
 					];
-			}else if(eregi ( "สวัสดี",$text, $regs )){
-					$messages = [
-						'type'=>'text',
-						'text'=>'สวัสดี'
-					];
-
-			}else if((eregi ( "ใช่", $text, $regs ))or(eregi ( "ตกลง", $text, $regs ))or(eregi ( "yes", $text, $regs ))or(eregi ( "ok", $text, $regs ))){
-				$messages = [
-					"id"=>"325708",
-					"type"=>"sticker",
-					"packageId"=>"1",
-					"stickerId"=>"1"
-				];
 			}
 
 
