@@ -65,10 +65,5 @@ if (!is_null($events['events'])) {
 		}
 	}
 }
-
-function add1()
-{
-file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/test_insert.php?msg=111');
-}
 echo "OK";
 
