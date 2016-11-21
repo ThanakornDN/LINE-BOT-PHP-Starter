@@ -2,7 +2,7 @@
 
 function familyName() {
     $aa="Hello";
-  return($aa);
+  return $aa;
 }
 
 ?>
