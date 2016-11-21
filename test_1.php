@@ -3,7 +3,7 @@ $access_token = 'VlxSZTyumW3qJsUKMnKOTLdqRd7chFWFJARPb7ZB/n3Lzf/lntpuOwBiLNieMRe
 $msg="";
 $m_type="";
 $regs="";
-$ans_state=0;,
+$ans_state=0;
 
 // Get POST body content
 $content = file_get_contents('php://input');
