@@ -20,9 +20,9 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-			$json_msg = find_ans($text);
-			$data_msg = json_decode($json_msg, true);
-			$msg = var_dump($data_msg['data']);
+			$msg = find_ans($text);
+//			$data_msg = json_decode($json_msg, true);
+//			$msg = var_dump($data_msg['data']);
 			//if(eregi ("Hi",$text, $regs )){
 					$messages = [
 						'type'=>'text',
