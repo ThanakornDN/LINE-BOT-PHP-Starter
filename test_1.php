@@ -28,7 +28,7 @@ if (!is_null($events['events'])) {
 			$msg_test1= $de_msg['data']['status'];
 					$messages = [
 						'type'=>'text',
-						'text'=>$de_msg
+						'text'=>$msg
 					];
 			//}
 
