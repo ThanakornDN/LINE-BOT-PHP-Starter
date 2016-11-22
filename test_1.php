@@ -25,7 +25,7 @@ if (!is_null($events['events'])) {
 //			$msg = var_dump($data_msg['data']);
 			//if(eregi ("Hi",$text, $regs )){
 			$de_msg = json_decode($msg, true);
-			$msg_test1= $de_msg['data'];
+			$msg_test1= $de_msg['data']['status'];
 					$messages = [
 						'type'=>'text',
 						'text'=>$de_msg
