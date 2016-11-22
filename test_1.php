@@ -24,11 +24,10 @@ if (!is_null($events['events'])) {
 //			$data_msg = json_decode($json_msg, true);
 //			$msg = var_dump($data_msg['data']);
 			//if(eregi ("Hi",$text, $regs )){
-			$de_msg = json_decode($msg, true);
-			$msg_test1= var_dump($msg);
+
 					$messages = [
 						'type'=>'text',
-						'text'=>$msg_test1
+						'text'=>$msg
 					];
 			//}
 
