@@ -15,7 +15,7 @@ function find_ans($text) {
         $re = $data2['msg']['type'];
     }
     
-    return $re;
+    return $maa;
     //if($msg_stat=='S0'){
     //    return '019';
     //}else if($msg_stat=='S1'){
