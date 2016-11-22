@@ -25,7 +25,7 @@ if (!is_null($events['events'])) {
 			if(eregi ("Hi",$text, $regs )){
 					$messages = [
 						'type'=>'text',
-						'text'=>$mm
+						'text'=>$msg
 					];
 			}
 
