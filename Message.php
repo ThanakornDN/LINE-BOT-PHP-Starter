@@ -9,7 +9,13 @@ function find_ans($text) {
             'data'=>[$msg_decode]
             ];
     $maa = json_encode($mss);
-    return $maa;
+    
+    $data1 = json_decode($maa, true);
+    foreach ($data1['data'] as $data2) {
+        $re = $data2['msg']['type'];
+    }
+    
+    return $re;
     //if($msg_stat=='S0'){
     //    return '019';
     //}else if($msg_stat=='S1'){
