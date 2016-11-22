@@ -9,7 +9,7 @@ function find_ans($text) {
     $ans_arr = $msg_decode['data'];
     //$ans_arr = $mm;
     if($msg_stat=='S0'){
-        return '012';
+        return '013';
     }else if($msg_stat=='S1'){
         return $ans_arr;
     }else{
