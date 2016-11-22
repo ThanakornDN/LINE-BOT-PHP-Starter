@@ -22,12 +22,12 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			$msg = find_ans($text);
 			
-			if(eregi ("Hi",$text, $regs )){
+			//if(eregi ("Hi",$text, $regs )){
 					$messages = [
 						'type'=>'text',
 						'text'=>$msg
 					];
-			}
+			//}
 
 
 
