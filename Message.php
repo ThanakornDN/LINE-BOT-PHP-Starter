@@ -8,7 +8,7 @@ function find_ans($text) {
     if($msg_stat=='S0'){
         return '003';
     }else if($msg_stat=='S1'){
-        return echo var_dump($msg_data);
+        return $msg_data[0];
     }else{
         return 'err';
     }
