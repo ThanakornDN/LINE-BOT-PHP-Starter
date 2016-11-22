@@ -25,10 +25,10 @@ if (!is_null($events['events'])) {
 //			$msg = var_dump($data_msg['data']);
 			//if(eregi ("Hi",$text, $regs )){
 
-					$messages = [
-						'type'=>'text',
-						'text'=>$msg
-					];
+					//$messages = [
+					//	'type'=>'text',
+					//	'text'=>$msg
+					//];
 			//}
 
 
@@ -37,7 +37,8 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages],
+				//'messages' => [$messages],
+				'messages' => [$msg],
 			];
 				
 			$post = json_encode($data);
