@@ -20,7 +20,7 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-			$mm = familyName();
+			$msg = find_ans($text);
 			
 			if(eregi ("Hi",$text, $regs )){
 					$messages = [
