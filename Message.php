@@ -6,7 +6,7 @@ function find_ans($text) {
     $msg_stat = $msg_decode['status'];
     //$msg_data = $s_ans;
     $mm = $msg_decode['data'];
-    $msg_data = json_encode($mm);
+    $msg_data = $msg_decode;
     if($msg_stat=='S0'){
         return '009';
     }else if($msg_stat=='S1'){
