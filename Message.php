@@ -11,7 +11,7 @@ function find_ans($text) {
     if($msg_stat=='S0'){
         return '018';
     }else if($msg_stat=='S1'){
-        return $mm;
+        return $s_ans;
     }else{
         return 'err';
     }
