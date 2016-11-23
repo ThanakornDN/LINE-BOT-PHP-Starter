@@ -6,10 +6,10 @@ function find_ans($text) {
     $msg_decode = json_decode($s_ans, true);
     $m_stat = $msg_decode['status'];
     if($m_stat == 'S1'){
-        $msg_ans =$m_stat;
-        //foreach ($msg_decode['events'] as $event) {
-        //    $text = $event['message']['text'];
-        //}
+        //$msg_ans =$m_stat;
+        foreach ($msg_decode['msg'] as $msg) {
+            $msg_ans = $msg['text'];
+        }
     }else if($m_stat == 'S0'){
         $msg_ans =$m_stat;
     }else{
