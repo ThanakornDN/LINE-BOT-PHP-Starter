@@ -11,7 +11,7 @@ function find_ans($text) {
         foreach ($msg_decode['msg'] as $msg) {
             $msg_dc = $msg['type'];
         }
-        array_push($ans_data,$msg);
+        array_push($ans_data,$msg_dc);
         $ans_arr= array("data"=>$ans_data); 
         $msg_ans=json_encode($ans_arr);
         
