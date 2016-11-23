@@ -26,13 +26,9 @@ if (!is_null($events['events'])) {
 			//if(eregi ("Hi",$text, $regs )){
 			
 					$messages = [
-						'type'=>$msg['type'],
-						'text'=>$msg['text']
+						'type'=>'text',
+						'text'=>$msg
 					];
-					//$messages = [
-					//	'type'=>'text',
-					//	'text'=>$msg
-					//];
 			//}
 
 
