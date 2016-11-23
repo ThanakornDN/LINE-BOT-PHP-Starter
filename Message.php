@@ -8,10 +8,10 @@ function find_ans($text) {
     $m_stat = $msg_decode['status'];
     if($m_stat == 'S1'){
         //$msg_ans =$m_stat;
-        //foreach ($msg_decode['msg'] as $msg) {
-        //    $msg_ans = $msg['text'];
-        //}
-        array_push($ans_data,$msg_decode);
+        foreach ($msg_decode['msg'] as $msg) {
+            $msg_dc = $msg;
+        }
+        array_push($ans_data,$msg);
         $ans_arr= array("data"=>$ans_data); 
         $msg_ans=json_encode($ans_arr);
         
