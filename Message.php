@@ -9,7 +9,7 @@ function find_ans($text) {
     if($m_stat == 'S1'){
         //$msg_ans =$m_stat;
         foreach ($msg_decode['msg'] as $msg) {
-            $msg_dc = $msg;
+            $msg_dc = $msg['type'];
         }
         array_push($ans_data,$msg);
         $ans_arr= array("data"=>$ans_data); 
