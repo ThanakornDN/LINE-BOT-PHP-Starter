@@ -33,7 +33,7 @@ if (!is_null($events['events'])) {
 
 					$messages = [
 						'type'=>'text',
-						'text'=>$msg_ans
+						'text'=>$msg
 					];		
 					//$messages = [
 					//	'type'=>'text',
