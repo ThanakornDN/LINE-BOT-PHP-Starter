@@ -7,9 +7,11 @@ function find_ans($text) {
     $m_stat = $msg_decode['status'];
     if($m_stat == 'S1'){
         //$msg_ans =$m_stat;
-        foreach ($msg_decode['msg'] as $msg) {
-            $msg_ans = $msg['text'];
-        }
+        //foreach ($msg_decode['msg'] as $msg) {
+        //    $msg_ans = $msg['text'];
+        //}
+        $ans_arr= array("data"=>$msg_decode);         
+        $msg_ans=json_encode($ans_arr);
     }else if($m_stat == 'S0'){
         $msg_ans =$m_stat;
     }else{
