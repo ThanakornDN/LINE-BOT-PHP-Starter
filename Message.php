@@ -8,17 +8,27 @@ function find_ans($text) {
     $m_stat = $msg_decode['status'];
     if($m_stat == 'S1'){
         //$msg_ans =$m_stat;
-        foreach ($msg_decode['msg'] as $msg) {
-            $msg_dc = $msg['type'];
-        }
-        array_push($ans_data,$msg_dc);
-        $ans_arr= array("data"=>$ans_data); 
-        $msg_ans=json_encode($ans_arr);
-        
+        //foreach ($msg_decode['msg'] as $msg) {
+        //    $msg_dc = $msg['type'];
+        //}
+        //array_push($ans_data,$msg_dc);
+        //$ans_arr= array("data"=>$ans_data); 
+        //$msg_ans=json_encode($ans_arr);
+        $msg_ans = $s_ans;
     }else if($m_stat == 'S0'){
-        $msg_ans =$m_stat;
+		$messages = [
+			'type'=>'type',
+			'text'=>$m_stat
+		];        
+    
+        $msg_ans =json_encode($messages);
     }else{
-        $msg_ans ='Error';
+		$messages = [
+			'type'=>'type',
+			'text'=>'Error'
+		];        
+    
+        $msg_ans =json_encode($messages);
     }
     
     //$msg_stat = $msg_decode['msg'];
