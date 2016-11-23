@@ -4,7 +4,7 @@ $msg="";
 $m_type="";
 $regs="";
 
-//include("Message.php");
+include("Message.php");
 
 // Get POST body content
 $content = file_get_contents('php://input');
