@@ -30,7 +30,7 @@ if (!is_null($events['events'])) {
 				foreach ($msg_decode['msg'] as $msg) {
             				$msg_ans = $msg['text'];
         			}
-					//$messages = [
+					$messages = [$msg_decode['msg']];
 					//	'type'=>'text',
 					//	'text'=>$s_ans
 					//];
@@ -42,8 +42,8 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				//'messages' => [$messages],
-				'messages' => $msg,
+				'messages' => [$messages],
+				//'messages' => $msg,
 			];
 				
 			$post = json_encode($data);
