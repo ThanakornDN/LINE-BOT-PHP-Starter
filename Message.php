@@ -6,7 +6,9 @@ function find_ans($msg_text) {
     //$msg_decode = json_decode($s_ans, true);
     //$msg_stat = $msg_decode['msg'];
     $events = json_decode($msg_text, true);
-    $text = $event['message']['text'];
+        foreach ($events['events'] as $event) {
+            $text = $event['message']['text'];
+        }           
     
 
     //if($msg_stat=='S0'){
