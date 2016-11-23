@@ -2,6 +2,7 @@
 
 function find_ans($text) {
     $ans_arr =array();
+    $ans_data =array();
     $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);
     $msg_decode = json_decode($s_ans, true);
     $m_stat = $msg_decode['status'];
@@ -10,8 +11,10 @@ function find_ans($text) {
         //foreach ($msg_decode['msg'] as $msg) {
         //    $msg_ans = $msg['text'];
         //}
-        $ans_arr= array("data"=>$msg_decode);         
+        array_push($ans_data,$msg_decode);
+        $ans_arr= array("data"=>$ans_data); 
         $msg_ans=json_encode($ans_arr);
+        
     }else if($m_stat == 'S0'){
         $msg_ans =$m_stat;
     }else{
