@@ -20,15 +20,20 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-			$msg = find_ans($text);
+//			$msg = find_ans($text);
 //			$data_msg = json_decode($json_msg, true);
 //			$msg = var_dump($data_msg['data']);
 			//if(eregi ("Hi",$text, $regs )){
 			
-					$messages = [
-						'type'=>'text',
-						'text'=>$msg
-					];
+			$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);			
+			$msg_decode = json_decode($s_ans, true);
+				foreach ($msg_decode['msg'] as $msg) {
+            				$msg_ans = $msg;
+        			}
+					//$messages = [
+					//	'type'=>'text',
+					//	'text'=>$msg
+					//];
 			//}
 
 
@@ -37,8 +42,8 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages],
-				//'messages' => [$meg],
+				//'messages' => [$messages],
+				'messages' => $msg_ans,
 			];
 				
 			$post = json_encode($data);
