@@ -26,13 +26,13 @@ if (!is_null($events['events'])) {
 			//if(eregi ("Hi",$text, $regs )){
 			
 			$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);			
-			$msg_decode = json_decode($s_ans, true);
-				foreach ($msg_decode['msg'] as $msg) {
-            				$msg_ans = $msg['text'];
-        			}
+			//$msg_decode = json_decode($s_ans, true);
+				//foreach ($msg_decode['msg'] as $msg) {
+            			//	$msg_ans = $msg['text'];
+        			//}
 					$messages = [
 						'type'=>'text',
-						'text'=>$msg_ans
+						'text'=>$s_ans
 					];
 			//}
 
