@@ -8,7 +8,7 @@ function find_ans($text) {
     if($m_stat == 'S1'){
         //$msg_ans =$m_stat;
         foreach ($msg_decode['msg'] as $msg) {
-            $msg_ans = $msg['text'];
+            $msg_ans = $msg;
         }
     }else if($m_stat == 'S0'){
         $msg_ans =$m_stat;
