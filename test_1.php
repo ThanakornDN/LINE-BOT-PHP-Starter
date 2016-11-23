@@ -30,10 +30,10 @@ if (!is_null($events['events'])) {
 				foreach ($msg_decode['msg'] as $msg) {
             				$msg_ans = $msg['text'];
         			}
-					$messages = [$msg];
-					//	'type'=>'text',
-					//	'text'=>$s_ans
-					//];
+					$messages = [
+						'type'=>'text',
+						'text'=>$s_ans
+					];
 			//}
 
 
