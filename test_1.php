@@ -25,10 +25,10 @@ if (!is_null($events['events'])) {
 //			$msg = var_dump($data_msg['data']);
 			//if(eregi ("Hi",$text, $regs )){
 
-					//$messages = [
-					//	'type'=>'text',
-					//	'text'=>$msg
-					//];
+					$messages = [
+						'type'=>'text',
+						'text'=>$content
+					];
 			//}
 
 
@@ -38,7 +38,7 @@ if (!is_null($events['events'])) {
 			$data = [
 				'replyToken' => $replyToken,
 				//'messages' => [$messages],
-				'messages' => [$msg],
+				'messages' => [$messages],
 			];
 				
 			$post = json_encode($data);
