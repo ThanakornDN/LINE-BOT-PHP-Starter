@@ -31,14 +31,14 @@ if (!is_null($events['events'])) {
             				$msg_ans = $msg['text'];
         			}
 
-					//$messages = [
-					//	'type'=>'text',
-					//	'text'=>$msg
-					//];			
 					$messages = [
 						'type'=>'text',
-						'text'=>$s_ans
-					];
+						'text'=>$msg
+					];		
+					//$messages = [
+					//	'type'=>'text',
+					//	'text'=>$s_ans
+					//];
 			//}
 
 
