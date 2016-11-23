@@ -32,7 +32,7 @@ if (!is_null($events['events'])) {
         			}
 
 					$messages = [
-						'type'=>$msg,
+						'type'=>'text',
 						'text'=>$msg
 					];			
 					//$messages = [
