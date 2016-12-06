@@ -33,6 +33,10 @@ if (!is_null($events['events'])) {
 			if($m_stat=='S1'){
 				if($msg_type=='text'){
 					$messages = $msg;
+				}
+			}else if($m_stat=='S1'){
+				if($msg_type=='text'){
+					$messages = $msg;
 				}			
 			}
 			//if($msg_type=='text'){
