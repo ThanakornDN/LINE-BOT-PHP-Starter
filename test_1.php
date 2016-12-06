@@ -32,7 +32,7 @@ if (!is_null($events['events'])) {
 			
 			$m_stat = $msg_decode['status'];
 			if($m_stat=='S1'){
-				$messages = $msg;
+				$messages_t = $msg;
 				//if($msg_type=='text'){
 				//	$messages = $s_ans;
 				//}			
@@ -42,7 +42,7 @@ if (!is_null($events['events'])) {
 				
 			}else{
 				if($msg_type=='text'){
-					$messages = $msg;
+					$messages_t = $msg;
 				}
 
 			}
