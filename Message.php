@@ -16,14 +16,16 @@ function find_ans($text) {
         //$msg_ans=json_encode($ans_arr);
         $msg_ans = $s_ans;
     }else if($m_stat == 'S0'){
-		$messages = [
+		//$messages = [
+	    	$msg = [
 			'type'=>'type',
 			'text'=>$m_stat
 		];        
     
         $msg_ans =json_encode($messages);
     }else{
-		$messages = [
+		//$messages = [
+	    	$msg = [
 			'type'=>'type',
 			'text'=>'Error'
 		];        
