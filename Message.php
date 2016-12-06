@@ -17,7 +17,7 @@ function find_ans($text) {
         $msg_ans = $s_ans;
     }else if($m_stat == 'S0'){
 		//$messages = [
-	    	$msg = [
+	    	$msg_ans = [
 			'type'=>'type',
 			'text'=>$m_stat
 		];        
@@ -25,7 +25,7 @@ function find_ans($text) {
         $msg_ans =json_encode($messages);
     }else{
 		//$messages = [
-	    	$msg = [
+	    	$msg_ans = [
 			'type'=>'type',
 			'text'=>'Error'
 		];        
