@@ -25,28 +25,30 @@ if (!is_null($events['events'])) {
 			
 			
 			//$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);			
-//			$msg_decode = json_decode($s_ans, true);
-//				foreach ($msg_decode['msg'] as $msg) {
-//          				$msg_type = $msg['type'];
-//	       			}
+			$msg_decode = json_decode($s_ans, true);
+				foreach ($msg_decode['msg'] as $msg) {
+         				$msg_type = $msg['type'];
+	       			}
 			
-//			$m_stat = $msg_decode['status'];
-//			if($m_stat=='S1'){	
-//				if($msg_type=='text'){
-//					$messages = $s_ans;
-//				}			
-//			}else if($m_stat=='S2'){
-//				$messages=[	
-//					'type'=>'text',
-//					'text' => $s_ans
-//				];			
-//				
-//			}else{
-//				if($msg_type=='text'){
-//					//$messages = $msg;
-//				}
-//
-//			}
+			$m_stat = $msg_decode['status'];
+			if($m_stat=='S1'){
+				$messages = $s_ans;
+				//if($msg_type=='text'){
+				//	$messages = $s_ans;
+				//}			
+			}else if($m_stat=='S2'){
+				$messages = $s_ans;
+				//$messages=[	
+				//	'type'=>'text',
+				//	'text' => $s_ans
+				//];			
+				
+			}else{
+				if($msg_type=='text'){
+					$messages = $msg;
+				}
+
+			}
 			
 			//if($msg_type=='text'){
 			//	$messages = $msg;
