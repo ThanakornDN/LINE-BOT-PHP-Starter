@@ -63,7 +63,7 @@ if (!is_null($events['events'])) {
 					//	'type'=>'text',
 					//	'text'=>$s_ans
 					//];		
-					$msg_t =json_encode($messages_t);
+					$msg_t =json_encode($msg_decode['msg']);
 					$messages = ['type'=>'text','text'=>$msg_t];	
 
 
