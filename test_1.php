@@ -40,11 +40,11 @@ if (!is_null($events['events'])) {
 			//}else if($msg_type=='sticker'){
 			//
 			//}
-
-					$messages2 = [
-						'type'=>'text',
-						'text'=>$s_ans
-					];		
+			$messages2 = json_decode($s_ans, true);
+					//$messages2 = [
+					//	'type'=>'text',
+					//	'text'=>$s_ans
+					//];		
 
 
 
