@@ -36,31 +36,11 @@ if (!is_null($events['events'])) {
 					$messages = $msg;
 				}			
 			}else if($m_stat=='S2'){
-			//$messages=[	
-			//	'type'=>'text',
-			//	'text' => $s_ans
-			//	];
-				$messages = [
-					  "type"=>"template",
-					  "altText"=>"this is a buttons template",
-					  "template"=>[
-					      "type"=>"buttons",
-					      "text"=>$msg_check,
-					      "actions"=>$msg
-//						  [
-//						  [
-//						    "type"=>"message",
-//						    "label"=>"Yes",
-//						    "text"=>"yes"
-//						  ],
-//						  [
-//						    "type"=>"message",
-//						    "label"=>"No",
-//						    "text"=>"no"
-//						  ]
-// 					      ]
-					  ]
+			$messages=[	
+				'type'=>'text',
+				'text' => $s_ans
 				];
+
 			}else{
 				if($msg_type=='text'){
 					$messages = $msg;
