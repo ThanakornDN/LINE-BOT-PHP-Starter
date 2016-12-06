@@ -46,7 +46,18 @@ if (!is_null($events['events'])) {
 					  "template"=>[
 					      "type"=>"buttons",
 					      "text"=>$msg_check,
-					      "actions"=>$msg
+					      "actions"=>[
+						  [
+						    "type"=>"message",
+						    "label"=>"Yes",
+						    "text"=>"yes"
+						  ],
+						  [
+						    "type"=>"message",
+						    "label"=>"No",
+						    "text"=>"no"
+						  ]
+ 					      ]
 					  ]
 				];
 			}else{
