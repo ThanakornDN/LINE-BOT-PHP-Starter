@@ -38,26 +38,7 @@ if (!is_null($events['events'])) {
 				//}			
 			}else if($m_stat=='S2'){
 				//$messages = $msg;
-				$messages_t = [
-					  "type"=>"template",
-					  "altText"=>"this is a buttons template",
-					  "template"=>[
-					      "type"=>"buttons",
-					      "text"=>$msg_check,
-					      "actions"=>[
-						  [
-						    "type"=>"message",
-						    "label"=>"Yes",
-						    "text"=>"yes"
-						  ],
-						  [
-						    "type"=>"message",
-						    "label"=>"No",
-						    "text"=>"no"
-						  ]
-					      ]
-					  ]
-				];			
+				$messages_t =$msg;			
 				
 			}else{
 				if($msg_type=='text'){
