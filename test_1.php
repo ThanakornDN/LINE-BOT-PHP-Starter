@@ -32,17 +32,17 @@ if (!is_null($events['events'])) {
 			
 			$m_stat = $msg_decode['status'];
 			if($m_stat=='S1'){
-				$messages_t = $msg;
+				$messages = $msg_decode['msg'];
 				//if($msg_type=='text'){
 				//	$messages = $s_ans;
 				//}			
 			}else if($m_stat=='S2'){
 				//$messages = $msg;
-				$messages_t =$msg;			
+				$messages =$msg_decode['msg'];			
 				
 			}else{
 				if($msg_type=='text'){
-					$messages_t = $msg;
+					$messages = $msg_decode['msg'];
 				}
 
 			}
@@ -63,8 +63,8 @@ if (!is_null($events['events'])) {
 					//	'type'=>'text',
 					//	'text'=>$s_ans
 					//];		
-					$msg_t =json_encode($msg_decode['msg']);
-					$messages = ['type'=>'text','text'=>$msg_t];	
+					//$msg_t =json_encode($msg_decode['msg']);
+					//$messages = ['type'=>'text','text'=>$msg_t];	
 
 
 			// Make a POST Request to Messaging API to reply to sender
