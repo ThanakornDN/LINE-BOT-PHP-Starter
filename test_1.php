@@ -37,12 +37,7 @@ if (!is_null($events['events'])) {
 				//	$messages = $s_ans;
 				//}			
 			}else if($m_stat=='S2'){
-				//$messages = $msg;
-				$messages = [
-					  "type"=>"template",
-					  "altText"=>"this is a buttons template",
-					  "template"=>$msg_decode['msg']
-				];		
+				//$messages = $msg;	
 				
 			}else{
 				if($msg_type=='text'){
@@ -68,7 +63,7 @@ if (!is_null($events['events'])) {
 					//	'text'=>$s_ans
 					//];		
 					//$msg_t =json_encode($msg_decode['msg']);
-					//$messages = ['type'=>'text','text'=>$msg_t];	
+					$messages = ['type'=>'text','text'=>$s_ans];	
 
 
 			// Make a POST Request to Messaging API to reply to sender
