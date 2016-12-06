@@ -22,10 +22,10 @@ if (!is_null($events['events'])) {
 
 
 			
-//			$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);
-//			$json_data = json_decode($s_ans, true);
-//			$stat_msg = $json_data['status'];
-//			$msg_db = $json_data['data'];
+			$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);
+			$json_data = json_decode($s_ans, true);
+			$stat_msg = $json_data['status'];
+			$msg_db = $json_data['data'];
 //			if(eregi ("S0",$stat_msg, $regs )){
 //					$messages = [
 //						'type'=>'text',
