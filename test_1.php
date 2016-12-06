@@ -38,11 +38,15 @@ if (!is_null($events['events'])) {
 				//}			
 			}else if($m_stat=='S2'){
 				//$messages = $msg;
-				$messages =$msg_decode['msg'];			
+				$messages = [
+					  "type"=>"template",
+					  "altText"=>"this is a buttons template",
+					  "template"=>$msg_decode['msg']
+				];		
 				
 			}else{
 				if($msg_type=='text'){
-					$messages = $msg_decode['msg'];
+					$messages = $msg;
 				}
 
 			}
