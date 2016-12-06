@@ -20,9 +20,10 @@ function find_ans($text) {
 	    	$messages = [
 			'type'=>'type',
 			'text'=>$m_stat
-		];        
+		];
+	    	$data= array("msg"=>$messages); 
     
-        $msg_ans =json_encode($messages);
+        $msg_ans =json_encode($data);
     }else{
 		//$messages = [
 	    	$messages = [
