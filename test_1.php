@@ -3,7 +3,7 @@ $access_token = 'VlxSZTyumW3qJsUKMnKOTLdqRd7chFWFJARPb7ZB/n3Lzf/lntpuOwBiLNieMRe
 $msg="";
 $m_type="";
 $regs="";
-$msg_check="???";
+$msg_check="";
 	
 include("Message.php");
 
@@ -31,6 +31,7 @@ if (!is_null($events['events'])) {
 	       			}
 			
 			$mss = $msg_decode['msg'];
+			$msg_check=$msg_decode['msg_check'];
 			$m_stat = $msg_decode['status'];
 			if($m_stat=='S1'){
 				$messages = $msg_decode['msg'];
