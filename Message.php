@@ -6,7 +6,7 @@ function find_ans($text) {
     $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);
     $msg_decode = json_decode($s_ans, true);
     $m_stat = $msg_decode['status'];
-    if($m_stat == 'S1'){
+    if($m_stat != 'S0'){
         //$msg_ans =$m_stat;
         //foreach ($msg_decode['msg'] as $msg) {
         //    $msg_dc = $msg['type'];
