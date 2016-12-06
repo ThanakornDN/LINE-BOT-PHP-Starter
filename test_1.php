@@ -30,16 +30,13 @@ if (!is_null($events['events'])) {
          				$msg_type = $msg['type'];
 	       			}
 			
-			$mss = $msg_decode['msg'];
+			$msg_c = $msg_decode['msg'];
 			$msg_check=$msg_decode['msg_check'];
 			$m_stat = $msg_decode['status'];
+			$num = $msg_decode['num'];
 			if($m_stat=='S1'){
-				$messages = $msg_decode['msg'];
-				//if($msg_type=='text'){
-				//	$messages = $s_ans;
-				//}			
-			}else if($m_stat=='S2'){
-				//$messages = $msg;	
+				$messages = $msg_decode['msg'];		
+			}else if($m_stat=='S2'){	
 				$messages = [
 					  "type"=>"template",
 					  "altText"=>"this is a buttons template",
@@ -49,13 +46,13 @@ if (!is_null($events['events'])) {
 					      "actions"=>[
 						  [
 						    "type"=>"message",
-						    "label"=>$mss[0],
-						    "text"=>$mss[0]
+						    "label"=>$msg_c[0],
+						    "text"=>$msg_c[0]
 						  ],
 						  [
 						    "type"=>"message",
-						    "label"=>$mss[1],
-						    "text"=>$mss[1]
+						    "label"=>$msg_c[1],
+						    "text"=>$msg_c[1]
 						  ]
 					      ]
 					  ]
