@@ -3,7 +3,8 @@ $access_token = 'VlxSZTyumW3qJsUKMnKOTLdqRd7chFWFJARPb7ZB/n3Lzf/lntpuOwBiLNieMRe
 $msg="";
 $m_type="";
 $regs="";
-
+$msg_check="???";
+	
 include("Message.php");
 
 // Get POST body content
@@ -39,7 +40,15 @@ if (!is_null($events['events'])) {
 			//	'type'=>'text',
 			//	'text' => $s_ans
 			//	];
-				$messages = $msg;
+				$messages = [
+					  "type"=>"template",
+					  "altText"=>"this is a buttons template",
+					  "template"=>[
+					      "type"=>"buttons",
+					      "text"=>$msg_check,
+					      "actions"=>$msg
+					  ]
+				];
 			}else{
 				if($msg_type=='text'){
 					$messages = $msg;
