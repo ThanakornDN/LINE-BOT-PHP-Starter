@@ -18,7 +18,7 @@ function find_ans($text) {
     }else if($m_stat == 'S0'){
 		//$messages = [
 	    	$messages = [
-			'type'=>'type',
+			'type'=>'text',
 			'text'=>$m_stat
 		];
 	    	$data= array("msg"=>$messages); 
@@ -27,7 +27,7 @@ function find_ans($text) {
     }else{
 		//$messages = [
 	    	$messages = [
-			'type'=>'type',
+			'type'=>'text',
 			'text'=>'Error'
 		];        
     
