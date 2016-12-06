@@ -34,6 +34,8 @@ if (!is_null($events['events'])) {
 				if($msg_type=='text'){
 					$messages = $msg;
 				}			
+			}else if($m_stat=='S2'){
+				$messages = $msg;
 			}else{
 				if($msg_type=='text'){
 					$messages = $msg;
