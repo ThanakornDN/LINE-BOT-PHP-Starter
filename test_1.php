@@ -29,7 +29,6 @@ if (!is_null($events['events'])) {
 				foreach ($msg_decode['msg'] as $msg) {
          				$msg_type = $msg['type'];
 	       			}
-			
 			$m_stat = $msg_decode['status'];
 			if($m_stat=='S1'){
 				$messages = $msg_decode['msg'];
@@ -38,7 +37,26 @@ if (!is_null($events['events'])) {
 				//}			
 			}else if($m_stat=='S2'){
 				//$messages = $msg;	
-				
+				$messages = [
+					  "type"=>"template",
+					  "altText"=>"this is a buttons template",
+					  "template"=>[
+					      "type"=>"buttons",
+					      "text"=>$msg_check,
+					      "actions"=>[
+						  [
+						    "type"=>"message",
+						    "label"=>$msg,
+						    "text"=>$msg
+						  ],
+						  [
+						    "type"=>"message",
+						    "label"=>$msg,
+						    "text"=>$msg
+						  ]
+					      ]
+					  ]
+				];
 			}else{
 				if($msg_type=='text'){
 					$messages = $msg;
