@@ -36,27 +36,91 @@ if (!is_null($events['events'])) {
 			$num = $msg_decode['num'];
 			if($m_stat=='S1'){
 				$messages = $msg_decode['msg'];		
-			}else if($m_stat=='S2'){	
-				$messages = [
-					  "type"=>"template",
-					  "altText"=>"this is a buttons template",
-					  "template"=>[
-					      "type"=>"buttons",
-					      "text"=>$msg_check,
-					      "actions"=>[
-						  [
-						    "type"=>"message",
-						    "label"=>$msg_c[0],
-						    "text"=>$msg_c[0]
-						  ],
-						  [
-						    "type"=>"message",
-						    "label"=>$msg_c[1],
-						    "text"=>$msg_c[1]
-						  ]
-					      ]
-					  ]
-				];
+			}else if($m_stat=='S2'){
+				
+				switch($num){
+					case '1':
+						$messages = [
+							  "type"=>"template",
+							  "altText"=>"this is a buttons template",
+							  "template"=>[
+							      "type"=>"buttons",
+							      "text"=>$msg_check,
+							      "actions"=>[
+								  [
+								    "type"=>"message",
+								    "label"=>$msg_c[0],
+								    "text"=>$msg_c[0]
+								  ],
+								  [
+								    "type"=>"message",
+								    "label"=>"อื่นๆ...",
+								    "text"=>"อื่นๆ..."
+								  ]
+							      ]
+							  ]
+						];
+						break;
+					case '2':
+						$messages = [
+							  "type"=>"template",
+							  "altText"=>"this is a buttons template",
+							  "template"=>[
+							      "type"=>"buttons",
+							      "text"=>$msg_check,
+							      "actions"=>[
+								  [
+								    "type"=>"message",
+								    "label"=>$msg_c[0],
+								    "text"=>$msg_c[0]
+								  ],
+								  [
+								    "type"=>"message",
+								    "label"=>$msg_c[1],
+								    "text"=>$msg_c[1]
+								  ],
+								  [
+								    "type"=>"message",
+								    "label"=>"อื่นๆ...",
+								    "text"=>"อื่นๆ..."
+								  ]
+							      ]
+							  ]
+						];
+						break;
+					case '3':
+						$messages = [
+							  "type"=>"template",
+							  "altText"=>"this is a buttons template",
+							  "template"=>[
+							      "type"=>"buttons",
+							      "text"=>$msg_check,
+							      "actions"=>[
+								  [
+								    "type"=>"message",
+								    "label"=>$msg_c[0],
+								    "text"=>$msg_c[0]
+								  ],
+								  [
+								    "type"=>"message",
+								    "label"=>$msg_c[1],
+								    "text"=>$msg_c[1]
+								  ],
+								  [
+								    "type"=>"message",
+								    "label"=>$msg_c[2],
+								    "text"=>$msg_c[2]
+								  ],
+								  [
+								    "type"=>"message",
+								    "label"=>"อื่นๆ...",
+								    "text"=>"อื่นๆ..."
+								  ]
+							      ]
+							  ]
+						];
+						break;
+				}
 			}else{
 				if($msg_type=='text'){
 					$messages = $msg;
