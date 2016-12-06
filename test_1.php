@@ -36,11 +36,32 @@ if (!is_null($events['events'])) {
 					$messages = $msg;
 				}			
 			}else if($m_stat=='S2'){
-			$messages=[	
-				'type'=>'text',
-				'text' => $s_ans
-				];
+			//$messages=[	
+			//	'type'=>'text',
+			//	'text' => $s_ans
+			//	];
 
+				$messages = [
+					  "type"=>"template",
+					  "altText"=>"this is a confirm template",
+					  "template"=>[
+					      "type"=>"confirm",
+					      "text"=>$msg_check,
+					      "actions"=> [
+						  [
+						    "type"=>"message",
+						    "label"=>"Yes",
+						    "text"=>"yes"
+						  ],
+						  [
+						    "type"=>"message",
+						    "label"=>"No",
+						    "text"=>"no"
+						  ]
+					      ]
+					]
+				];				
+				
 			}else{
 				if($msg_type=='text'){
 					$messages = $msg;
