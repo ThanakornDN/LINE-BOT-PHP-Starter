@@ -38,7 +38,7 @@ if (!is_null($events['events'])) {
 				//}			
 			}else if($m_stat=='S2'){
 				//$messages = $msg;
-				$messages = [
+				$messages_t = [
 					  "type"=>"template",
 					  "altText"=>"this is a buttons template",
 					  "template"=>[
@@ -82,7 +82,8 @@ if (!is_null($events['events'])) {
 					//	'type'=>'text',
 					//	'text'=>$s_ans
 					//];		
-					//$messages = ['type'=>'text','text'=>$s_ans];	
+					$msg_t =json_encode($messages_t);
+					$messages = ['type'=>'text','text'=>$msg_t];	
 
 
 			// Make a POST Request to Messaging API to reply to sender
