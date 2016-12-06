@@ -49,14 +49,14 @@ if (!is_null($events['events'])) {
 								"type"=> "postback",
 								"label"=> "Buy",
 								"text"=> "Hey|Hey"
-							], [
+							],[
 								"type"=> "postback",
 								"label"=> "Buy",
-								"text"=> "Hey|\u0e2b\u0e27\u0e31\u0e14\u0e14\u0e35"
-							], [
+								"text"=> "Hey"
+							],[
 								"type"=> "postback",
 								"label"=> "Buy",
-								"text"=> "Hey|\u0e14\u0e35\u0e08\u0e49\u0e32\u0e32\u0e32"
+								"text"=> "Hey|"
 							]
 						]
 					]
