@@ -47,17 +47,17 @@ if (!is_null($events['events'])) {
 					  "template"=>[
 					      "type"=>"buttons",
 					      "text"=>$msg_check,
-					      "actions"=> [
-						  [
-						    "type"=>"message",
-						    "label"=>"Yes",
-						    "text"=>"yes"
-						  ],
-						  [
-						    "type"=>"message",
-						    "label"=>"No",
-						    "text"=>"no"
-						  ]
+					      "actions"=> [$msg
+//						  [
+//						    "type"=>"message",
+//						    "label"=>"Yes",
+//						    "text"=>"yes"
+//						  ],
+//						  [
+//						    "type"=>"message",
+//						    "label"=>"No",
+//						    "text"=>"no"
+//						  ]
 					      ]
 					]
 				];				
