@@ -62,33 +62,6 @@ if (!is_null($events['events'])) {
 						];
 						break;
 					case '2':
-						$messages = [
-							  "type"=>"template",
-							  "altText"=>"this is a buttons template",
-							  "template"=>[
-							      "type"=>"buttons",
-							      "thumbnailImageUrl"=>"OK1",
-							      "title": "Menu",
-							      "text"=>$msg_check,
-							      "actions"=>[
-								  [
-								    "type"=>"postback",
-								    "label"=>$msg_c[0],
-								    "data": "action=buy&itemid=123"
-								  ],
-								  [
-								    "type"=>"postback",
-								    "label"=>$msg_c[1],
-								    "data": "action=buy&itemid=123"
-								  ],
-								  [
-								    "type"=>"postback",
-								    "label"=>"อื่นๆ...",
-								    "data": "action=buy&itemid=123"
-								  ]
-							      ]
-							  ]
-						];
 						break;
 					case '3':
 						$messages = [
