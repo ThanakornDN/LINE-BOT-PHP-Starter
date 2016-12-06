@@ -46,13 +46,13 @@ if (!is_null($events['events'])) {
 					      "actions"=>[
 						  [
 						    "type"=>"message",
-						    "label"=>$msg,
-						    "text"=>$msg
+						    "label"=>"1",
+						    "text"=>"1"
 						  ],
 						  [
 						    "type"=>"message",
-						    "label"=>$msg,
-						    "text"=>$msg
+						    "label"=>"2",
+						    "text"=>"2"
 						  ]
 					      ]
 					  ]
