@@ -41,12 +41,7 @@ if (!is_null($events['events'])) {
 			//
 			}
 			
-			//$msg_decode = json_decode($s_ans, true);
-			//	foreach ($msg_decode['msg'] as $msg) {
-            		//		$msg_type = $msg['type'];
-        		//	}
-			//$messages2 = $msg_decode['msg'];
-					//$messages2 = [
+					//$messages = [
 					//	'type'=>'text',
 					//	'text'=>$s_ans
 					//];		
