@@ -29,17 +29,16 @@ if (!is_null($events['events'])) {
             				$msg_type = $msg['type'];
         			}
 			
-			//$m_stat = $msg_decode['status'];
-			//if($m_stat=='S0'){
-			//	if($msg_type=='text'){
-			//		$messages = $msg;
-			//	}
-			//}else 
-			//if($m_stat=='S1'){
+			$m_stat = $msg_decode['status'];
+			if($m_stat=='S1'){
 				if($msg_type=='text'){
 					$messages = $msg;
 				}			
-			//}
+			}else{
+				if($msg_type=='text'){
+					$messages = $msg;
+				}	
+			}
 			//if($msg_type=='text'){
 			//	$messages = $msg;
 			//}else if($msg_type=='image'){
