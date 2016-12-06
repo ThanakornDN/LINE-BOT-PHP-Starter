@@ -32,12 +32,12 @@ if (!is_null($events['events'])) {
 			
 			$m_stat = $msg_decode['status'];
 			if($m_stat=='S1'){
-				$messages = $s_ans;
+				$messages = $msg;
 				//if($msg_type=='text'){
 				//	$messages = $s_ans;
 				//}			
 			}else if($m_stat=='S2'){
-				$messages = $s_ans;
+				$messages = $msg;
 				//$messages=[	
 				//	'type'=>'text',
 				//	'text' => $s_ans
