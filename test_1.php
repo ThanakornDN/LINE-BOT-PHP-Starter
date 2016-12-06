@@ -37,11 +37,30 @@ if (!is_null($events['events'])) {
 				//	$messages = $s_ans;
 				//}			
 			}else if($m_stat=='S2'){
-				$messages = $msg;
-				//$messages=[	
-				//	'type'=>'text',
-				//	'text' => $s_ans
-				//];			
+				//$messages = $msg;
+				$messages = [
+						"type"=> "template",
+						"altText"=> "this is a buttons template",
+						"template"=> [
+							"type"=> "buttons",
+							"text"=> "???",
+							"actions"=> [
+							[
+								"type"=> "postback",
+								"label"=> "Buy",
+								"text"=> "Hey|Hey"
+							], [
+								"type"=> "postback",
+								"label"=> "Buy",
+								"text"=> "Hey|\u0e2b\u0e27\u0e31\u0e14\u0e14\u0e35"
+							], [
+								"type"=> "postback",
+								"label"=> "Buy",
+								"text"=> "Hey|\u0e14\u0e35\u0e08\u0e49\u0e32\u0e32\u0e32"
+							]
+						]
+					]
+				];			
 				
 			}else{
 				if($msg_type=='text'){
