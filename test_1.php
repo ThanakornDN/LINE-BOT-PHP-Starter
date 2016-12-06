@@ -48,12 +48,12 @@ if (!is_null($events['events'])) {
 							      "text"=>$msg_check,
 							      "actions"=>[
 								  [
-								    "type"=>"postback",
+								    "type"=>"message",
 								    "label"=>$msg_c[0],
 								    "text"=>$msg_c[0]
 								  ],
 								  [
-								    "type"=>"postback",
+								    "type"=>"message",
 								    "label"=>"อื่นๆ...",
 								    "text"=>"อื่นๆ..."
 								  ]
@@ -97,22 +97,22 @@ if (!is_null($events['events'])) {
 							      "text"=>$msg_check,
 							      "actions"=>[
 								  [
-								    "type"=>"postback",
+								    "type"=>"message",
 								    "label"=>$msg_c[0],
 								    "text"=>"อื่นๆ..."
 								  ],
 								  [
-								    "type"=>"postback",
+								    "type"=>"message",
 								    "label"=>$msg_c[1],
 								    "text"=>"อื่นๆ..."
 								  ],
 								  [
-								    "type"=>"postback",
+								    "type"=>"message",
 								    "label"=>$msg_c[2],
 								    "text"=>"อื่นๆ..."
 								  ],
 								  [
-								    "type"=>"postback",
+								    "type"=>"message",
 								    "label"=>"อื่นๆ...",
 								    "text"=>"อื่นๆ..."
 								  ]
