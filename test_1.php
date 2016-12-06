@@ -31,7 +31,7 @@ if (!is_null($events['events'])) {
 	       			}
 			
 			$msg_c = $msg_decode['msg'];
-			$msg_check=$msg_decode['msg_check'];
+			$msg_check=$msg_decode['msg_check']." ตอบว่าไงดี ???";
 			$m_stat = $msg_decode['status'];
 			$num = $msg_decode['num'];
 			if($m_stat=='S1'){
