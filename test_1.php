@@ -30,7 +30,7 @@ if (!is_null($events['events'])) {
         			}
 			
 			$m_stat = $msg_decode['status'];
-			if($m_stat=='S1'){
+			if($m_stat=='S0'){
 				if($msg_type=='text'){
 					$messages = $msg;
 				}
