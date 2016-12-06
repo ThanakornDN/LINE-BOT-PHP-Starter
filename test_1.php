@@ -70,17 +70,17 @@ if (!is_null($events['events'])) {
 							      "text"=>$msg_check,
 							      "actions"=>[
 								  [
-								    "type"=>"postback",
+								    "type"=>"message",
 								    "label"=>$msg_c[0],
 								    "text"=>$msg_c[0]
 								  ],
 								  [
-								    "type"=>"postback",
+								    "type"=>"message",
 								    "label"=>$msg_c[1],
 								    "text"=>$msg_c[1]
 								  ],
 								  [
-								    "type"=>"postback",
+								    "type"=>"message",
 								    "label"=>"อื่นๆ...",
 								    "text"=>"อื่นๆ..."
 								  ]
