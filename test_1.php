@@ -67,22 +67,24 @@ if (!is_null($events['events'])) {
 							  "altText"=>"this is a buttons template",
 							  "template"=>[
 							      "type"=>"buttons",
+							      "thumbnailImageUrl"=>"OK1",
+							      "title": "Menu",
 							      "text"=>$msg_check,
 							      "actions"=>[
 								  [
-								    "type"=>"message",
+								    "type"=>"postback",
 								    "label"=>$msg_c[0],
-								    "text"=>$msg_c[0]
+								    "data": "action=buy&itemid=123"
 								  ],
 								  [
-								    "type"=>"message",
+								    "type"=>"postback",
 								    "label"=>$msg_c[1],
-								    "text"=>$msg_c[1]
+								    "data": "action=buy&itemid=123"
 								  ],
 								  [
-								    "type"=>"message",
+								    "type"=>"postback",
 								    "label"=>"อื่นๆ...",
-								    "text"=>"อื่นๆ..."
+								    "data": "action=buy&itemid=123"
 								  ]
 							      ]
 							  ]
