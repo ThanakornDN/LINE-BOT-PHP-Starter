@@ -48,13 +48,13 @@ if (!is_null($events['events'])) {
 					      "actions"=>[
 						  [
 						    "type"=>"message",
-						    "label"=>"1",
-						    "text"=>"1"
+						    "label"=>$mss[0],
+						    "text"=>$mss[0]
 						  ],
 						  [
 						    "type"=>"message",
-						    "label"=>"2",
-						    "text"=>"2"
+						    "label"=>$mss[1],
+						    "text"=>$mss[1]
 						  ]
 					      ]
 					  ]
@@ -83,7 +83,7 @@ if (!is_null($events['events'])) {
 					//	'text'=>$s_ans
 					//];		
 					//$msg_t =json_encode($msg_decode['msg']);
-					$messages = ['type'=>'text','text'=>$mss[1]];	
+					//$messages = ['type'=>'text','text'=>$mss[1]];	
 
 
 			// Make a POST Request to Messaging API to reply to sender
