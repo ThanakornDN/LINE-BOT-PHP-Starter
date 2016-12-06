@@ -99,22 +99,22 @@ if (!is_null($events['events'])) {
 								  [
 								    "type"=>"postback",
 								    "label"=>$msg_c[0],
-								    "data": "action=add&itemid=111"
+								    "text"=>"อื่นๆ..."
 								  ],
 								  [
 								    "type"=>"postback",
 								    "label"=>$msg_c[1],
-								    "data": "action=add&itemid=111"
+								    "text"=>"อื่นๆ..."
 								  ],
 								  [
 								    "type"=>"postback",
 								    "label"=>$msg_c[2],
-								    "data": "action=add&itemid=111"
+								    "text"=>"อื่นๆ..."
 								  ],
 								  [
 								    "type"=>"postback",
 								    "label"=>"อื่นๆ...",
-								    "data": "action=add&itemid=111"
+								    "text"=>"อื่นๆ..."
 								  ]
 							      ]
 							  ]
