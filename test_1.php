@@ -29,6 +29,8 @@ if (!is_null($events['events'])) {
 				foreach ($msg_decode['msg'] as $msg) {
          				$msg_type = $msg['type'];
 	       			}
+			
+			$mss = $msg_decode['msg'];
 			$m_stat = $msg_decode['status'];
 			if($m_stat=='S1'){
 				$messages = $msg_decode['msg'];
@@ -81,7 +83,7 @@ if (!is_null($events['events'])) {
 					//	'text'=>$s_ans
 					//];		
 					//$msg_t =json_encode($msg_decode['msg']);
-					$messages = ['type'=>'text','text'=>$msg];	
+					$messages = ['type'=>'text','text'=>$mss[1]];	
 
 
 			// Make a POST Request to Messaging API to reply to sender
