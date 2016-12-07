@@ -110,12 +110,12 @@ if (!is_null($events['events'])) {
 						break;
 					case '3':
 						$messages = [
-							  "type"=>"template",
-							  "altText"=>"this is a buttons template",
-							  "template"=>[
-							      "type"=>"buttons",
-							      "text"=>$msg_check,
-							      "actions"=>[
+							  "type"=> "template",
+							  "altText"=> "this is a buttons template",
+							  "template"=> [
+							      "type"=> "buttons",
+							      "text"=> $msg_check,
+							      "actions"=> [
 								  [
 								    "type"=>"message",
 								    "label"=>$msg_c[0],
