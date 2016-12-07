@@ -32,7 +32,7 @@ if (!is_null($events['events'])) {
 			
 			$msg_c = $msg_decode['msg'];
 			$arrlength=count($msg_c);
-			$msg_check=$msg_decode['msg_check']." ตอบว่าไงดี ???";
+			$msg_check=$msg_decode['msg_check']." ต้องตอบว่าไงดี ???";
 			$m_stat = $msg_decode['status'];
 			//$num = $msg_decode['num'];
 			
