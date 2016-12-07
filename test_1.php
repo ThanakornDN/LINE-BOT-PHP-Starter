@@ -41,7 +41,7 @@ if (!is_null($events['events'])) {
 			}else if($m_stat=='S2'){
 				
 				switch($arrlength){
-					case '-1':
+					case '0':
 						$messages = [
 							  "type"=>"template",
 							  "altText"=>"this is a buttons template",
@@ -58,7 +58,7 @@ if (!is_null($events['events'])) {
 							  ]
 						];
 						break;
-					case '0':
+					case '1':
 						$messages = [
 							  "type"=>"template",
 							  "altText"=>"this is a buttons template",
@@ -68,7 +68,7 @@ if (!is_null($events['events'])) {
 							      "actions"=>[
 								  [
 								    "type"=>"postback",
-								    "label"=>$arrlength,
+								    "label"=>$msg_c[0],
 								    "data"=>$msg_c[0]
 								  ],
 								  [
@@ -80,7 +80,7 @@ if (!is_null($events['events'])) {
 							  ]
 						];
 						break;
-					case '1':
+					case '2':
 						$messages = [
 							  "type"=> "template",
 							  "altText"=> "this is a buttons template",
@@ -92,7 +92,7 @@ if (!is_null($events['events'])) {
 							      "actions"=> [
 								  [
 								    "type"=> "postback",
-								    "label"=> $arrlength,
+								    "label"=> $msg_c[0],
 								    "data"=> $msg_c[0]
 								  ],
 								  [
@@ -109,7 +109,7 @@ if (!is_null($events['events'])) {
 							  ]
 						];
 						break;
-					case '2':
+					case '3':
 						$messages = [
 							  "type"=> "template",
 							  "altText"=> "this is a buttons template",
@@ -119,7 +119,7 @@ if (!is_null($events['events'])) {
 							      "actions"=> [
 								  [
 								    "type"=> "postback",
-								    "label"=>$arrlength,
+								    "label"=>$msg_c[0],
 								    "data"=>$msg_c[0]
 								  ],
 								  [
