@@ -86,7 +86,7 @@ if (!is_null($events['events'])) {
 							  "template"=> [
 							      "type"=> "buttons",
 							      //"thumbnailImageUrl"=> "https://example.com/bot/images/image.jpg",
-							      "title"=> "Menu",
+							      //"title"=> "Menu",
 							      "text"=> "Please select",
 							      "actions"=> [
 								  [
