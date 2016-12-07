@@ -87,7 +87,7 @@ if (!is_null($events['events'])) {
 							      "type"=> "buttons",
 							      //"thumbnailImageUrl"=> "https://example.com/bot/images/image.jpg",
 							      //"title"=> "Menu",
-							      "text"=> "Please select",
+							      "text"=> $msg_check,
 							      "actions"=> [
 								  [
 								    "type"=> "postback",
