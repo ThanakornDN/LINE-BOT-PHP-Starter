@@ -40,7 +40,7 @@ if (!is_null($events['events'])) {
 				$messages = $msg_decode['msg'];		
 			}else if($m_stat=='S2'){
 				
-				switch($arrlength){
+				switch($arrlength++){
 					case '0':
 						$messages = [
 							  "type"=>"template",
@@ -67,14 +67,14 @@ if (!is_null($events['events'])) {
 							      "text"=>$msg_check,
 							      "actions"=>[
 								  [
-								    "type"=>"message",
+								    "type"=>"postback",
 								    "label"=>$msg_c[0],
-								    "text"=>$msg_c[0]
+								    "data"=>$msg_c[0]
 								  ],
 								  [
-								    "type"=>"message",
+								    "type"=>"postback",
 								    "label"=>"อื่นๆ...",
-								    "text"=>"อื่นๆ..."
+								    "data"=>"อื่นๆ..."
 								  ]
 							      ]
 							  ]
@@ -92,8 +92,8 @@ if (!is_null($events['events'])) {
 							      "actions"=> [
 								  [
 								    "type"=> "postback",
-								    "label"=> "Buy",
-								    "data"=> "action=buy&itemid=123"
+								    "label"=> $msg_c[0],
+								    "data"=> $msg_c[0]
 								  ],
 								  [
 								    "type"=> "postback",
@@ -101,9 +101,9 @@ if (!is_null($events['events'])) {
 								    "data"=> $msg_c[1]
 								  ],
 								  [
-								    "type"=> "uri",
-								    "label"=> "View detail",
-								    "uri"=>"http://example.com/page/123"
+								    "type"=> "postback",
+								    "label"=> "อื่นๆ...",
+								    "data"=>"อื่นๆ..."
 								  ]
 							      ]
 							  ]
