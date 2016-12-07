@@ -34,11 +34,29 @@ if (!is_null($events['events'])) {
 			$msg_check=$msg_decode['msg_check']." ตอบว่าไงดี ???";
 			$m_stat = $msg_decode['status'];
 			$num = $msg_decode['num'];
+			
 			if($m_stat=='S1'){
 				$messages = $msg_decode['msg'];		
 			}else if($m_stat=='S2'){
 				
 				switch($num){
+					case '0':
+						$messages = [
+							  "type"=>"template",
+							  "altText"=>"this is a buttons template",
+							  "template"=>[
+							      "type"=>"buttons",
+							      "text"=>$msg_check,
+							      "actions"=>[
+									  [
+									    "type"=>"message",
+									    "label"=>"อื่นๆ...",
+									    "text"=>"อื่นๆ..."
+									  ]
+							      ]
+							  ]
+						];
+						break;
 					case '1':
 						$messages = [
 							  "type"=>"template",
@@ -78,8 +96,8 @@ if (!is_null($events['events'])) {
 								  ],
 								  [
 								    "type"=> "postback",
-								    "label"=> "Add to cart",
-								    "data"=> "action=add&itemid=123"
+								    "label"=> $msg_c[1],
+								    "data"=> $msg_c[1]
 								  ],
 								  [
 								    "type"=> "uri",
@@ -101,22 +119,22 @@ if (!is_null($events['events'])) {
 								  [
 								    "type"=>"message",
 								    "label"=>$msg_c[0],
-								    "text"=>"อื่นๆ..."
+								    "text"=>$msg_c[0]
 								  ],
 								  [
 								    "type"=>"message",
 								    "label"=>$msg_c[1],
-								    "text"=>"อื่นๆ..."
+								    "text"=>$msg_c[1]
 								  ],
 								  [
 								    "type"=>"message",
 								    "label"=>$msg_c[2],
-								    "text"=>"อื่นๆ..."
+								    "text"=>$msg_c[2]
 								  ],
 								  [
 								    "type"=>"message",
-								    "label"=>$content,
-								    "text"=>$content
+								    "label"=>"อื่นๆ...",
+								    "text"=>"อื่นๆ..."
 								  ]
 							      ]
 							  ]
@@ -129,18 +147,6 @@ if (!is_null($events['events'])) {
 				}
 
 			}
-			
-			//if($msg_type=='text'){
-			//	$messages = $msg;
-			//}else if($msg_type=='image'){
-				
-			//}else if($msg_type=='video'){
-				
-			//}else if($msg_type=='audio'){
-			
-			//}else if($msg_type=='sticker'){
-			//
-			//}
 			
 					//$messages = [
 					//	'type'=>'text',
