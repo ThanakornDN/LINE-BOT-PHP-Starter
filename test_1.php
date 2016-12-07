@@ -42,7 +42,7 @@ if (!is_null($events['events'])) {
 			}else if($m_stat=='S2'){
 				
 				switch($arrlength){
-					case '0':
+					case '-1':
 						$messages = [
 							  "type"=>"template",
 							  "altText"=>"this is a buttons template",
@@ -59,7 +59,7 @@ if (!is_null($events['events'])) {
 							  ]
 						];
 						break;
-					case '1':
+					case '0':
 						$messages = [
 							  "type"=>"template",
 							  "altText"=>"this is a buttons template",
@@ -81,7 +81,7 @@ if (!is_null($events['events'])) {
 							  ]
 						];
 						break;
-					case '2':
+					case '1':
 						$messages = [
 							  "type"=> "template",
 							  "altText"=> "this is a buttons template",
@@ -110,7 +110,7 @@ if (!is_null($events['events'])) {
 							  ]
 						];
 						break;
-					case '3':
+					case '2':
 						$messages = [
 							  "type"=> "template",
 							  "altText"=> "this is a buttons template",
