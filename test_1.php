@@ -32,7 +32,6 @@ if (!is_null($events['events'])) {
 			
 			$msg_c = $msg_decode['msg'];
 			$arrlength=count($msg_c);
-			$arrlength++;
 			$msg_check=$msg_decode['msg_check']." ตอบว่าไงดี ???";
 			$m_stat = $msg_decode['status'];
 			//$num = $msg_decode['num'];
@@ -69,7 +68,7 @@ if (!is_null($events['events'])) {
 							      "actions"=>[
 								  [
 								    "type"=>"postback",
-								    "label"=>$msg_c[0],
+								    "label"=>$arrlength,
 								    "data"=>$msg_c[0]
 								  ],
 								  [
@@ -93,7 +92,7 @@ if (!is_null($events['events'])) {
 							      "actions"=> [
 								  [
 								    "type"=> "postback",
-								    "label"=> $msg_c[0],
+								    "label"=> $arrlength,
 								    "data"=> $msg_c[0]
 								  ],
 								  [
@@ -120,7 +119,7 @@ if (!is_null($events['events'])) {
 							      "actions"=> [
 								  [
 								    "type"=> "postback",
-								    "label"=>$msg_c[0],
+								    "label"=>$arrlength,
 								    "data"=>$msg_c[0]
 								  ],
 								  [
