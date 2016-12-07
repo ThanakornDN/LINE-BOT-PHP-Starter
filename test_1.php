@@ -32,6 +32,7 @@ if (!is_null($events['events'])) {
 			
 			$msg_c = $msg_decode['msg'];
 			$arrlength=count($msg_c);
+			$arrlength++;
 			$msg_check=$msg_decode['msg_check']." ตอบว่าไงดี ???";
 			$m_stat = $msg_decode['status'];
 			//$num = $msg_decode['num'];
@@ -40,7 +41,7 @@ if (!is_null($events['events'])) {
 				$messages = $msg_decode['msg'];		
 			}else if($m_stat=='S2'){
 				
-				switch($arrlength++){
+				switch($arrlength){
 					case '0':
 						$messages = [
 							  "type"=>"template",
