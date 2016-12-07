@@ -115,8 +115,8 @@ if (!is_null($events['events'])) {
 								  ],
 								  [
 								    "type"=>"message",
-								    "label"=>"อื่นๆ...",
-								    "text"=>"อื่นๆ..."
+								    "label"=>$content,
+								    "text"=>$content
 								  ]
 							      ]
 							  ]
