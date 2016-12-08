@@ -37,13 +37,13 @@ if (!is_null($events['events'])) {
 			$m_stat = $msg_decode['status'];
 			$msg_type = $msg_decode['msg_type'];
 			
-			if($msg_type=='S1'){
+			if($msg_type=='Message'){
 				$messages = [
 						'type'=>'text',
 						'text'=>$msg_decode['msg']
 					];	
 				//$messages = $msg_decode['msg'];		
-			}else if($msg_type=='S2'){
+			}else if($msg_type=='Template'){
 				
 				switch($arrlength){
 					case '0':
