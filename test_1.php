@@ -4,6 +4,7 @@ $msg="";
 $m_type="";
 $regs="";
 $msg_check="";
+$it=3;
 	
 include("Message.php");
 
@@ -23,7 +24,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			$s_ans = find_ans($text);
 			
-			
+		if($it='99'){	
 			//$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);			
 			$msg_decode = json_decode($s_ans, true);
 				foreach ($msg_decode['msg'] as $msg) {
@@ -149,12 +150,13 @@ if (!is_null($events['events'])) {
 
 			}
 			
+		}			
 					//$messages = [
 					//	'type'=>'text',
 					//	'text'=>$s_ans
 					//];		
 					//$msg_t =json_encode($msg_decode['msg']);
-					//$messages = ['type'=>'text','text'=>$mss[1]];	
+					$messages = ['type'=>'text','text'=>$s_ans];	
 
 
 			// Make a POST Request to Messaging API to reply to sender
