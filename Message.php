@@ -6,9 +6,9 @@ function find_ans($text) {
     $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/check_MSG.php?msg='.$text);
     $msg_decode = json_decode($s_ans, true);
     $m_stat = $msg_decode['status'];
-    if($m_stat == '1'){
+    if($m_stat == 1){
         $msg_ans = $s_ans;
-    }else if($m_stat == '0'){
+    }else if($m_stat == 0){
 		//$messages = [
 	    	$messages = [
 			'type'=>'text',
