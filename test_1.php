@@ -25,7 +25,7 @@ if (!is_null($events['events'])) {
 			$s_ans = find_ans($text);
 			
 			//$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/check_MSG.php?msg='.$text);			
-		if($it='99'){
+		//if($it='99'){
 			$msg_decode = json_decode($s_ans, true);
 				foreach ($msg_decode['msg'] as $msg) {
          				$msg_type = $msg['type'];
@@ -35,11 +35,15 @@ if (!is_null($events['events'])) {
 			$arrlength=count($msg_c);
 			$msg_check=$msg_decode['msg_check']." ต้องตอบว่าไงดี ???";
 			$m_stat = $msg_decode['status'];
-			//$num = $msg_decode['num'];
+			$msg_type = $msg_decode['msg_type'];
 			
-			if($m_stat=='S1'){
-				$messages = $msg_decode['msg'];		
-			}else if($m_stat=='S2'){
+			if($msg_type=='S1'){
+				$messages = [
+						'type'=>'text',
+						'text'=>$msg_decode['msg']
+					];	
+				//$messages = $msg_decode['msg'];		
+			}else if($msg_type=='S2'){
 				
 				switch($arrlength){
 					case '0':
@@ -150,13 +154,13 @@ if (!is_null($events['events'])) {
 
 			}
 			
-		}			
+		//}			
 					//$messages = [
 					//	'type'=>'text',
 					//	'text'=>$s_ans
 					//];		
 					//$msg_t =json_encode($msg_decode['msg']);
-					$messages = ['type'=>'text','text'=>$s_ans];	
+					//$messages = ['type'=>'text','text'=>$s_ans];	
 
 
 			// Make a POST Request to Messaging API to reply to sender
