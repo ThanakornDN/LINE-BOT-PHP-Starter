@@ -185,10 +185,16 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];	
 			$updt = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);
+			//$messages = [
+			//	'type'=>'text',
+			//	'text'=>$text
+			//];	
 			$messages = [
-				'type'=>'text',
-				'text'=>$text
+				 "type": "sticker",
+				 "packageId": "2",
+				 "stickerId": "179"
 			];	
+			
 			
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
