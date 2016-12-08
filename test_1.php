@@ -43,10 +43,8 @@ if (!is_null($events['events'])) {
 						'text'=>$msg_decode['msg']
 					];	
 				//$messages = $msg_decode['msg'];		
-			}
-		if($it='99'){
-			//else 
-			if($msg_type=='Template'){
+			}else if($msg_type=='Template'){
+		//if($it='99'){
 				$msg_c = $msg_decode['msg'];
 				$arrlength=count($msg_c);
 				$msg_check=$msg_decode['msg_check']." ต้องตอบว่าไงดี ???";	
@@ -154,10 +152,7 @@ if (!is_null($events['events'])) {
 						break;
 				}
 			}else{
-				if($msg_type=='text'){
-					$messages = $msg;
-				}
-
+				$messages = ['type'=>'text','text'=>'Error'];
 			}
 			
 		}			
