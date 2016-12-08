@@ -31,9 +31,6 @@ if (!is_null($events['events'])) {
          				$msg_type = $msg['type'];
 	       			}
 			
-//			$msg_c = $msg_decode['msg'];
-//			$arrlength=count($msg_c);
-//			$msg_check=$msg_decode['msg_check']." ต้องตอบว่าไงดี ???";
 			$m_stat = $msg_decode['status'];
 			$msg_type = $msg_decode['msg_type'];
 			
@@ -44,7 +41,6 @@ if (!is_null($events['events'])) {
 					];	
 				//$messages = $msg_decode['msg'];		
 			}else if($msg_type=='Template'){
-		//if($it='99'){
 				$msg_c = $msg_decode['msg'];
 				$arrlength=count($msg_c);
 				$msg_check=$msg_decode['msg_check']." ต้องตอบว่าไงดี ???";	
@@ -153,9 +149,7 @@ if (!is_null($events['events'])) {
 				}
 			}else{
 				$messages = ['type'=>'text','text'=>'Error'];
-			}
-			
-		//}			
+			}			
 					//$messages = [
 					//	'type'=>'text',
 					//	'text'=>$s_ans
