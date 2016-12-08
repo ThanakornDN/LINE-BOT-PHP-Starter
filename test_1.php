@@ -190,9 +190,9 @@ if (!is_null($events['events'])) {
 			//	'text'=>$text
 			//];	
 			$messages = [
-				 "type": "sticker",
-				 "packageId": "2",
-				 "stickerId": "179"
+				 "type"=> "sticker",
+				 "packageId"=> "2",
+				 "stickerId"=> "179"
 			];	
 			
 			
