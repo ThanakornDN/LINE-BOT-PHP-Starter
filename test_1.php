@@ -184,7 +184,7 @@ if (!is_null($events['events'])) {
 			$text = $event['postback']['data'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];	
-			
+			$updt = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/check_MSG.php?msg='.$text);
 			$messages = [
 				'type'=>'text',
 				'text'=>$text
