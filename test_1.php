@@ -25,15 +25,15 @@ if (!is_null($events['events'])) {
 			$s_ans = find_ans($text);
 			
 			//$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/check_MSG.php?msg='.$text);			
-		if($it='99'){
+		
 			$msg_decode = json_decode($s_ans, true);
 				foreach ($msg_decode['msg'] as $msg) {
          				$msg_type = $msg['type'];
 	       			}
 			
-			$msg_c = $msg_decode['msg'];
-			$arrlength=count($msg_c);
-			$msg_check=$msg_decode['msg_check']." ต้องตอบว่าไงดี ???";
+//			$msg_c = $msg_decode['msg'];
+//			$arrlength=count($msg_c);
+//			$msg_check=$msg_decode['msg_check']." ต้องตอบว่าไงดี ???";
 			$m_stat = $msg_decode['status'];
 			$msg_type = $msg_decode['msg_type'];
 			
@@ -43,7 +43,13 @@ if (!is_null($events['events'])) {
 						'text'=>$msg_decode['msg']
 					];	
 				//$messages = $msg_decode['msg'];		
-			}else if($msg_type=='Template'){
+			}
+		if($it='99'){
+			//else 
+			if($msg_type=='Template'){
+				$msg_c = $msg_decode['msg'];
+				$arrlength=count($msg_c);
+				$msg_check=$msg_decode['msg_check']." ต้องตอบว่าไงดี ???";	
 				
 				switch($arrlength){
 					case '0':
@@ -160,7 +166,7 @@ if (!is_null($events['events'])) {
 					//	'text'=>$s_ans
 					//];		
 					//$msg_t =json_encode($msg_decode['msg']);
-					$messages = ['type'=>'text','text'=>$s_ans];	
+					//$messages = ['type'=>'text','text'=>$s_ans];	
 
 
 			// Make a POST Request to Messaging API to reply to sender
