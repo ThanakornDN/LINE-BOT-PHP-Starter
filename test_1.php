@@ -33,7 +33,7 @@ if (!is_null($events['events'])) {
 			
 			$m_stat = $msg_decode['status'];
 			$msg_type = $msg_decode['msg_type'];
-			$id_userMSG = $msg_decode['id_userMSG'];
+			//$id_userMSG = $msg_decode['id_userMSG'];
 			
 			if($msg_type=='Message'){
 				$messages = [
@@ -200,28 +200,28 @@ if (!is_null($events['events'])) {
 			$text = $event['postback']['data'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];
-			$str (explode("|",$text));
-			$insertMSG = $str[1].$str[2]
-			if($str[0] == "update"){
-				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);
-				$messages = [
-					 "type"=> "sticker",
-					 "packageId"=> "2",
-					 "stickerId"=> "179"
-				];
-			}else if($str[0] == "insert"){
-				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/insert_ans.php?msg='.$insertMSG);
-				$messages = [
-					 "type"=> "sticker",
-					 "packageId"=> "2",
-					 "stickerId"=> "179"
-				];
-			}else{
-				$messages = [
-					'type'=>'text',
-					'text'=>$text
-				];
-			}
+//			$str (explode("|",$text));
+//			$insertMSG = $str[1].$str[2]
+//			if($str[0] == "update"){
+//				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);
+//				$messages = [
+//					 "type"=> "sticker",
+//					 "packageId"=> "2",
+//					 "stickerId"=> "179"
+//				];
+//			}else if($str[0] == "insert"){
+//				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/insert_ans.php?msg='.$insertMSG);
+//				$messages = [
+//					 "type"=> "sticker",
+//					 "packageId"=> "2",
+//					 "stickerId"=> "179"
+//				];
+//			}else{
+//				$messages = [
+//					'type'=>'text',
+//					'text'=>$text
+//				];
+//			}
 //			$messages = [
 //				 "type"=> "sticker",
 //				 "packageId"=> "2",
