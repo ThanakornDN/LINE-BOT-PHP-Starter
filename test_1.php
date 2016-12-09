@@ -158,9 +158,9 @@ if (!is_null($events['events'])) {
 						"text"=>$text." ต้องตอบว่าไงดี ???",
 						"actions"=>[
 							[
-							"type"=>"message",
+							"type"=> "postback",
 							"label"=>"เพิ่มคำตอบ...",
-							"text"=>"insert|new|".$text
+							"data"=>"insert|new|".$text
 							]
 						]
 					]
@@ -236,7 +236,7 @@ if (!is_null($events['events'])) {
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => $str[0],
+				'messages' => $messages,
 			];
 				
 			$post = json_encode($data);
