@@ -138,11 +138,11 @@ if (!is_null($events['events'])) {
 					  "altText"=> "this is a buttons template",
 					  "template"=> [
 					      "type"=> "buttons",
-					      "text"=> "Please select",
+					      "text"=> $msg_check,
 					      "actions"=> [
 						  [
 						    "type"=> "postback",
-						    "label"=> "Buy",
+						    "label"=> "เพิ่มคำตอบ",
 						    "data"=> "action=buy&itemid=123"
 						  ]
 					      ]
