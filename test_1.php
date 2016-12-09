@@ -33,6 +33,7 @@ if (!is_null($events['events'])) {
 			
 			$m_stat = $msg_decode['status'];
 			$msg_type = $msg_decode['msg_type'];
+			$id_userMSG = $msg_decode['id_userMSG'];
 			
 			if($msg_type=='Message'){
 				$messages = [
@@ -57,7 +58,7 @@ if (!is_null($events['events'])) {
 									  [
 									    "type"=>"message",
 									    "label"=>"อื่นๆ...",
-									    "text"=>"อื่นๆ..."
+									    "text"=>"insert|new|".$text
 									  ]
 							      ]
 							  ]
@@ -74,12 +75,12 @@ if (!is_null($events['events'])) {
 								  [
 								    "type"=>"postback",
 								    "label"=>$msg_c[0],
-								    "data"=>$msg_c[0]
+								    "data"=>"update|".$msg_c[0]
 								  ],
 								  [
 								    "type"=>"postback",
 								    "label"=>"อื่นๆ...",
-								    "data"=>"อื่นๆ..."
+								    "data"=>"insert|add|".$text
 								  ]
 							      ]
 							  ]
@@ -98,17 +99,17 @@ if (!is_null($events['events'])) {
 								  [
 								    "type"=> "postback",
 								    "label"=> $msg_c[0],
-								    "data"=> $msg_c[0]
+								    "data"=> "update|".$msg_c[0]
 								  ],
 								  [
 								    "type"=> "postback",
 								    "label"=> $msg_c[1],
-								    "data"=> $msg_c[1]
+								    "data"=> "update|".$msg_c[1]
 								  ],
 								  [
 								    "type"=> "postback",
 								    "label"=> "อื่นๆ...",
-								    "data"=>"อื่นๆ..."
+								    "data"=>"insert|add|".$text
 								  ]
 							      ]
 							  ]
@@ -125,22 +126,22 @@ if (!is_null($events['events'])) {
 								  [
 								    "type"=> "postback",
 								    "label"=>$msg_c[0],
-								    "data"=>$msg_c[0]
+								    "data"=>"update|".$msg_c[0]
 								  ],
 								  [
 								    "type"=> "postback",
 								    "label"=>$msg_c[1],
-								    "data"=>$msg_c[1]
+								    "data"=>"update|".$msg_c[1]
 								  ],
 								  [
 								    "type"=> "postback",
 								    "label"=>$msg_c[2],
-								    "data"=>$msg_c[2]
+								    "data"=>"update|".$msg_c[2]
 								  ],
 								  [
 								    "type"=> "postback",
 								    "label"=>"อื่นๆ...",
-								    "data"=>"อื่นๆ..."
+								    "data"=>"insert|add|".$text
 								  ]
 							      ]
 							  ]
@@ -159,7 +160,7 @@ if (!is_null($events['events'])) {
 							[
 							"type"=>"message",
 							"label"=>"เพิ่มคำตอบ...",
-							"text"=>"new_ans"
+							"text"=>"insert|new|".$text
 							]
 						]
 					]
@@ -198,17 +199,34 @@ if (!is_null($events['events'])) {
 
 			$text = $event['postback']['data'];
 			// Get replyToken
-			$replyToken = $event['replyToken'];	
-			$updt = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);
-			//$messages = [
-			//	'type'=>'text',
-			//	'text'=>$text
-			//];	
-			$messages = [
-				 "type"=> "sticker",
-				 "packageId"=> "2",
-				 "stickerId"=> "179"
-			];	
+			$replyToken = $event['replyToken'];
+			$str (explode("|",$text));
+			$insertMSG = $str[1].$str[2]
+			if($str[0] == "update"){
+				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);
+				$messages = [
+					 "type"=> "sticker",
+					 "packageId"=> "2",
+					 "stickerId"=> "179"
+				];
+			}else if($str[0] == "insert"){
+				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/insert_ans.php?msg='.$insertMSG);
+				$messages = [
+					 "type"=> "sticker",
+					 "packageId"=> "2",
+					 "stickerId"=> "179"
+				];
+			}else{
+				$messages = [
+					'type'=>'text',
+					'text'=>$text
+				];
+			}
+//			$messages = [
+//				 "type"=> "sticker",
+//				 "packageId"=> "2",
+//				 "stickerId"=> "179"
+//			];	
 			
 			
 			$url = 'https://api.line.me/v2/bot/message/reply';
