@@ -179,11 +179,36 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];	
 			$str = explode("|",$text);
 			$insertMSG = $str[1]."|".$str[2];
+
+			if($str[0] == "update"){
+				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);
+				$messages = [
+				 "type"=> "sticker",
+					 "packageId"=> "2",
+					 "stickerId"=> "179"
+				];
+			}else if($str[0] == "insert"){
+				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/insert_ans.php?msg='.$insertMSG);
+				$messages = [
+					'type'=>'text',
+					'text'=>'พิมพ์ '.$result.''
+				];
+			}else{
+				$messages = [
+					'type'=>'text',
+					'text'=>$text
+				];
+			}
+//			$messages = [
+//				 "type"=> "sticker",
+//				 "packageId"=> "2",
+//				 "stickerId"=> "179"
+//			];				
 			
-			$messages = [
-				'type'=>'text',
-				'text'=>$insertMSG
-			];	
+			//$messages = [
+			//	'type'=>'text',
+			//	'text'=>$insertMSG
+			//];	
 			
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
