@@ -133,26 +133,11 @@ if (!is_null($events['events'])) {
 				}
 			}else{
 				//$messages = ['type'=>'text','text'=>'Erro1r'];
-						$messages = [
-							  "type"=>"template",
-							  "altText"=>"this is a buttons template",
-							  "template"=>[
-							      "type"=>"buttons",
-							      "text"=>$msg_check,
-							      "actions"=>[
-								  [
-								    "type"=>"postback",
-								    "label"=>"อื่นๆ...",
-								    "data"=>"update|"."อื่นๆ..."
-								  ],
-								  [
-								    "type"=>"postback",
-								    "label"=>"อื่นๆ...",
-								    "data"=>"insert|add|".$text
-								  ]
-							      ]
-							  ]
-						];
+				$messages = [
+					 "type"=> "sticker",
+					 "packageId"=> "2",
+					 "stickerId"=> "179"
+				];
 				
 			}			
 					//$messages = [
