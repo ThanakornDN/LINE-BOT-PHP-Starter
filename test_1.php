@@ -138,7 +138,7 @@ if (!is_null($events['events'])) {
 					  "altText"=> "this is a buttons template",
 					  "template"=> [
 					      "type"=> "buttons",
-					      "text"=> $msg_check,
+					      "text"=> $text."ต้องตอบว่าไงดี ???",
 					      "actions"=> [
 						  [
 						    "type"=> "postback",
