@@ -183,20 +183,14 @@ if (!is_null($events['events'])) {
 			if($str[0] == "update"){
 				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);
 				$messages = [
-				 "type"=> "sticker",
-					 "packageId"=> "2",
-					 "stickerId"=> "179"
+					'type'=>'text',
+					'text'=>'พิมพ์ '.$result.':คำตอบ'
 				];
 			}else if($str[0] == "insert"){
 				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/insert_ans.php?msg='.$insertMSG);
 				$messages = [
-					[
 					'type'=>'text',
-					'text'=>'พิมพ์ '.$result.':..คำตอบ..'
-					],[
-					'type'=>'text',
-					'text'=>'พิมพ์ '.$result.':..คำตอบ..'
-					]
+					'text'=>'พิมพ์ '.$result.':คำตอบ'
 				];
 			}else{
 				$messages = [
