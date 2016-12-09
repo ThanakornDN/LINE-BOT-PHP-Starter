@@ -143,7 +143,7 @@ if (!is_null($events['events'])) {
 						  [
 						    "type"=> "postback",
 						    "label"=> "เพิ่มคำตอบ",
-						    "data"=>"insert|new|".$text
+						    "data"=>"insert|new|"
 						  ]
 					      ]
 					  ]
@@ -180,31 +180,6 @@ if (!is_null($events['events'])) {
 			//$insertMSG = $str[1]."|".$str[2];
 			
 			$messages = ['type'=>'text','text'=>$text];	
-//			if($str[0] == "update"){
-//				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);
-//				$messages = [
-//				 "type"=> "sticker",
-//					 "packageId"=> "2",
-//					 "stickerId"=> "179"
-//				];
-//			}else if($str[0] == "insert"){
-//				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/insert_ans.php?msg='.$insertMSG);
-//				$messages = [
-//					'type'=>'text',
-//					'text'=>'พิมพ์ '.$result.''
-//				];
-//			}else{
-//				$messages = [
-//					'type'=>'text',
-//					'text'=>$text
-//				];
-//			}
-//			$messages = [
-//				 "type"=> "sticker",
-//				 "packageId"=> "2",
-//				 "stickerId"=> "179"
-//			];	
-			
 			
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
