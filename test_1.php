@@ -143,7 +143,7 @@ if (!is_null($events['events'])) {
 						  [
 						    "type"=> "postback",
 						    "label"=> "เพิ่มคำตอบ",
-						    "data"=>"insert|new|"
+						    "data"=>"insert|new|".$text
 						  ]
 					      ]
 					  ]
