@@ -148,7 +148,22 @@ if (!is_null($events['events'])) {
 						break;
 				}
 			}else{
-				$messages = ['type'=>'text','text'=>'Error'];
+				//$messages = ['type'=>'text','text'=>'Error'];
+				$messages = [
+					"type"=>"template",
+					"altText"=>"this is a buttons template",
+					"template"=>[
+						"type"=>"buttons",
+						"text"=>$text." ต้องตอบว่าไงดี ???",
+						"actions"=>[
+							[
+							"type"=>"message",
+							"label"=>"อื่นๆ...",
+							"text"=>"อื่นๆ..."
+							]
+						]
+					]
+				];
 			}			
 					//$messages = [
 					//	'type'=>'text',
