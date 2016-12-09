@@ -158,8 +158,8 @@ if (!is_null($events['events'])) {
 						"actions"=>[
 							[
 							"type"=>"message",
-							"label"=>"อื่นๆ...",
-							"text"=>"อื่นๆ..."
+							"label"=>"เพิ่มคำตอบ...",
+							"text"=>"new_ans"
 							]
 						]
 					]
