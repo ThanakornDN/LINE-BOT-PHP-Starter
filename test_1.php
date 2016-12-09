@@ -138,27 +138,16 @@ if (!is_null($events['events'])) {
 					  "altText"=> "this is a buttons template",
 					  "template"=> [
 					      "type"=> "buttons",
-					      "thumbnailImageUrl"=> "https://example.com/bot/images/image.jpg",
-					      "title"=> "Menu",
-					      "text"=> "Please select",
+					      "text"=> $text." ต้องตอบว่าไงดี ???",
 					      "actions"=> [
 						  [
 						    "type"=> "postback",
-						    "label"=> "Buy",
-						    "data"=> "action=buy&itemid=123"
-						  ],
-						  [
-						    "type"=> "postback",
-						    "label"=> "Add to cart",
-						    "data"=> "action=add&itemid=123"
-						  ],
-						  [
-						    "type"=> "uri",
-						    "label"=> "View detail",
-						    "uri"=> "http://example.com/page/123"
+						    "label"=> "เพิ่มคำตอบ",
+						    "data"=>"insert|new|"
 						  ]
 					      ]
 					  ]
+
 				];
 				
 			}			
