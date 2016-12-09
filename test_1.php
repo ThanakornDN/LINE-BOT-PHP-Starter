@@ -33,7 +33,7 @@ if (!is_null($events['events'])) {
 			
 			$m_stat = $msg_decode['status'];
 			$msg_type = $msg_decode['msg_type'];
-			//$id_userMSG = $msg_decode['id_userMSG'];
+			$id_userMSG = $msg_decode['id_userMSG'];
 			
 			if($msg_type=='Message'){
 				$messages = [
