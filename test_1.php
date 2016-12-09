@@ -149,7 +149,7 @@ if (!is_null($events['events'])) {
 						break;
 				}
 			}else{
-				$messages = ['type'=>'text','text'=>'Error'];
+				$messages = ['type'=>'text','text'=>'Erro1r'];
 			}			
 					//$messages = [
 					//	'type'=>'text',
