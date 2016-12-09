@@ -56,9 +56,9 @@ if (!is_null($events['events'])) {
 							      "text"=>$msg_check,
 							      "actions"=>[
 									  [
-									    "type"=>"message",
-									    "label"=>"อื่นๆ...",
-									    "text"=>"insert|new|".$text
+									    "type"=>"postback",
+									    "label"=>"เพิ่มคำตอบ...",
+									    "data"=>"insert|new|".$text
 									  ]
 							      ]
 							  ]
@@ -151,19 +151,19 @@ if (!is_null($events['events'])) {
 			}else{
 				//$messages = ['type'=>'text','text'=>'Error'];
 				$messages = [
-					"type"=>"template",
-					"altText"=>"this is a buttons template",
-					"template"=>[
-						"type"=>"buttons",
-						"text"=>$text." ต้องตอบว่าไงดี ???",
-						"actions"=>[
-							[
-							"type"=> "postback",
-							"label"=>"เพิ่มคำตอบ...",
-							"data"=>"insert|new|".$text
-							]
-						]
-					]
+				  "type"=>"template",
+				  "altText"=>"this is a buttons template",
+				  "template"=>[
+				      "type"=>"buttons",
+				      "text"=>$msg_check,
+				      "actions"=>[
+					  [
+					    "type"=>"postback",
+					    "label"=>"เพิ่มคำตอบ...",
+					    "data"=>"insert|new|".$text
+					  ]
+				      ]
+				  ]
 				];
 			}			
 					//$messages = [
