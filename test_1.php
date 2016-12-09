@@ -188,10 +188,12 @@ if (!is_null($events['events'])) {
 			$text = $event['postback']['data'];
 			// Get replyToken
 			$replyToken = $event['replyToken'];	
+			$str = explode("|",$text);
+			$insertMSG = $str[1]."|".$str[2];
 			
 			$messages = [
 				'type'=>'text',
-				'text'=>$text
+				'text'=>$insertMSG
 			];	
 			
 			$url = 'https://api.line.me/v2/bot/message/reply';
