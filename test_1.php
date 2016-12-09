@@ -181,7 +181,7 @@ if (!is_null($events['events'])) {
 			$insertMSG = $str[1]."|".$str[2];
 
 			if($str[0] == "update"){
-				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$text);
+				$result = $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/update_frequency.php?msg='.$str[1]);
 				$messages = [
 					 "type"=> "sticker",
 					 "packageId"=> "2",
