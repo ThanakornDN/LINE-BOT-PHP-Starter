@@ -47,23 +47,6 @@ if (!is_null($events['events'])) {
 				$msg_check=$msg_decode['msg_check']." ต้องตอบว่าไงดี ???";	
 				
 				switch($arrlength){
-					case '0':
-						$messages = [
-							  "type"=>"template",
-							  "altText"=>"this is a buttons template",
-							  "template"=>[
-							      "type"=>"buttons",
-							      "text"=>$msg_check,
-							      "actions"=>[
-									  [
-									    "type"=>"postback",
-									    "label"=>"เพิ่มคำตอบ...",
-									    "data"=>"insert|new|".$text
-									  ]
-							      ]
-							  ]
-						];
-						break;
 					case '1':
 						$messages = [
 							  "type"=>"template",
