@@ -149,37 +149,7 @@ if (!is_null($events['events'])) {
 						break;
 				}
 			}else{
-				//$messages = ['type'=>'text','text'=>'Error'];
-						$messages = [
-							  "type"=> "template",
-							  "altText"=> "this is a buttons template",
-							  "template"=> [
-							      "type"=> "buttons",
-							      "text"=> $msg_check,
-							      "actions"=> [
-								  [
-								    "type"=> "postback",
-								    "label"=>$msg_c[0],
-								    "data"=>"update|".$msg_c[0]
-								  ],
-								  [
-								    "type"=> "postback",
-								    "label"=>$msg_c[1],
-								    "data"=>"update|".$msg_c[1]
-								  ],
-								  [
-								    "type"=> "postback",
-								    "label"=>$msg_c[2],
-								    "data"=>"update|".$msg_c[2]
-								  ],
-								  [
-								    "type"=> "postback",
-								    "label"=>"อื่นๆ...",
-								    "data"=>"insert|add|".$text
-								  ]
-							      ]
-							  ]
-						];
+				$messages = ['type'=>'text','text'=>'Error'];
 			}			
 					//$messages = [
 					//	'type'=>'text',
