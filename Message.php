@@ -19,12 +19,27 @@ function find_ans($text) {
     
         $msg_ans =json_encode($data);
     }else{
-		//$messages = [
-	    	$messages = [
-			'type'=>'text',
-			'text'=>'Error'
-		];        
-    
+
+//	    	$messages = [
+//			'type'=>'text',
+//			'text'=>'Error'
+//		];        
+		$messages = [
+			"type"=>"template",
+			"altText"=>"this is a buttons template",
+			"template"=>[
+			      "type"=>"buttons",
+			      "text"=>$msg_check,
+			      "actions"=>[
+				  [
+				    "type"=>"message",
+				    "label"=>"อื่นๆ...",
+				    "text"=>"อื่นๆ..."
+				  ]
+			      ]
+		  ]
+		];
+	    
         $msg_ans =json_encode($messages);
     }
     
