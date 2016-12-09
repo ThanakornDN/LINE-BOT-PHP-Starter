@@ -149,22 +149,22 @@ if (!is_null($events['events'])) {
 						break;
 				}
 			}else{
-				//$messages = ['type'=>'text','text'=>'Error'];
-				$messages = [
-				  "type"=>"template",
-				  "altText"=>"this is a buttons template",
-				  "template"=>[
-				      "type"=>"buttons",
-				      "text"=>$msg_check,
-				      "actions"=>[
-					  [
-					    "type"=>"postback",
-					    "label"=>"เพิ่มคำตอบ...",
-					    "data"=>"insert|new|".$text
-					  ]
-				      ]
-				  ]
-				];
+				$messages = ['type'=>'text','text'=>'Error'];
+//				$messages = [
+//				  "type"=>"template",
+//				  "altText"=>"this is a buttons template",
+//				  "template"=>[
+//				      "type"=>"buttons",
+//				      "text"=>$msg_check,
+//				      "actions"=>[
+//					  [
+//					    "type"=>"postback",
+//					    "label"=>"เพิ่มคำตอบ...",
+//					    "data"=>"insert|new|".$text
+//					  ]
+//				      ]
+//				  ]
+//				];
 			}			
 					//$messages = [
 					//	'type'=>'text',
