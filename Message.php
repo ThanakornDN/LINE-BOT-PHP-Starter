@@ -15,7 +15,7 @@ function find_ans($text) {
 		//	'text'=>$m_stat
 		//];
 	    	//array_push($ans_arr,$messages);
-	    	$data= array("msg"=>$m_stat,"msg_type"=>""); 
+	    	$data= array("msg"=>$s_ans,"msg_type"=>""); 
     
         $msg_ans =json_encode($data);
 	    //$msg_ans = $s_ans;
