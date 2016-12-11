@@ -135,23 +135,23 @@ if (!is_null($events['events'])) {
 						
 				}
 			}else{
-				$messages = ['type'=>'text','text'=>$s_ans];
-				//$messages = [
-				//	  "type"=> "template",
-				//	  "altText"=> "this is a buttons template",
-				//	  "template"=> [
-				//	      "type"=> "buttons",
-				//	      "text"=> $text." <ต้องตอบว่าไงดี ???",
-				//	      "actions"=> [
-				//		  [
-				//		    "type"=> "postback",
-				//		    "label"=> "เพิ่มคำตอบ",
-				//		    "data"=>"insert|new|".$text
-				//		  ]
-				//	      ]
-				//	  ]
+				//$messages = ['type'=>'text','text'=>$s_ans];
+				$messages = [
+					  "type"=> "template",
+					  "altText"=> "this is a buttons template",
+					  "template"=> [
+					      "type"=> "buttons",
+					      "text"=> $text." <ต้องตอบว่าไงดี ???",
+					      "actions"=> [
+						  [
+						    "type"=> "postback",
+						    "label"=> "เพิ่มคำตอบ",
+						    "data"=>"insert|new|".$text
+						  ]
+					      ]
+					  ]
 
-				//];
+				];
 				
 			}			
 			// Make a POST Request to Messaging API to reply to sender
