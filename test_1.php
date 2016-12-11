@@ -38,7 +38,7 @@ if (!is_null($events['events'])) {
 			if($msg_type=='Message'){
 				$messages = [
 						'type'=>'text',
-						'text'=>"no"
+						'text'=>$msg_decode['msg']
 					];	
 				//$messages = $msg_decode['msg'];		
 			}else if($msg_type=='Template'){
