@@ -28,7 +28,7 @@ if (!is_null($events['events'])) {
 		
 			$msg_decode = json_decode($s_ans, true);
 				foreach ($msg_decode['msg'] as $msg) {
-         				$msg_type = $msg['type'];
+         				$msg_type = $msg['msg_type'];
 	       			}
 			
 			$m_stat = $msg_decode['status'];
