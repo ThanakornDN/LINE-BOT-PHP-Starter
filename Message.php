@@ -10,14 +10,15 @@ function find_ans($text) {
         $msg_ans = $s_ans;
     }else if($m_stat == 0){
 		//$messages = [
-	    	$messages = [
-			'type'=>'text',
-			'text'=>$m_stat
-		];
-	    	array_push($ans_arr,$messages);
-	    	$data= array("msg"=>$ans_arr); 
+	    	//$messages = [
+		//	'type'=>'text',
+		//	'text'=>$m_stat
+		//];
+	    	//array_push($ans_arr,$messages);
+	    	//$data= array("msg"=>$ans_arr); 
     
-        $msg_ans =json_encode($data);
+        //$msg_ans =json_encode($data);
+	    $msg_ans = $s_ans;
     }else{
 
 	    	$messages = [
