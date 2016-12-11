@@ -134,6 +134,12 @@ if (!is_null($events['events'])) {
 						$messages = ['type'=>'text','text'=>$s_ans];
 						
 				}
+			}else if($msg_type=='insert'){
+				$messages = [
+					 "type"=> "sticker",
+					 "packageId"=> "2",
+					 "stickerId"=> "179"
+				];
 			}else{
 				$messages = ['type'=>'text','text'=>$s_ans];
 				//$messages = [
