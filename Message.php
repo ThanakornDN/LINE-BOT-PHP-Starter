@@ -6,6 +6,7 @@ function find_ans($text) {
     $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/check_MSG.php?msg='.$text);
     $msg_decode = json_decode($s_ans, true);
     $m_stat = $msg_decode['status'];
+    $msg = $msg_decode['msg'];
     if($m_stat == 1){
         $msg_ans = $s_ans;
     }else if($m_stat == 0){
@@ -15,7 +16,7 @@ function find_ans($text) {
 		//	'text'=>$m_stat
 		//];
 	    	//array_push($ans_arr,$messages);
-	    	$data= array("msg"=>"NO","msg_type"=>"Message"); 
+	    	$data= array("msg"=>$msg,"msg_type"=>"Message"); 
     
         $msg_ans =json_encode($data);
 	    //$msg_ans = $s_ans;
