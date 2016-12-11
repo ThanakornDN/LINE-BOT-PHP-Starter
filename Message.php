@@ -10,13 +10,12 @@ function find_ans($text) {
     if($m_stat == 1){
         $msg_ans = $s_ans;
     }else if($m_stat == 0){
-		//$messages = [
 	    	//$messages = [
 		//	'type'=>'text',
 		//	'text'=>$m_stat
 		//];
-	    	//array_push($ans_arr,$messages);
-	    	$data= array("msg"=>$s_ans,"msg_type"=>"Message"); 
+	    	array_push($ans_arr,$messages);
+	    	$data= array("msg"=>$m_stat,"msg_type"=>""); 
     
         $msg_ans =json_encode($data);
 	    //$msg_ans = $s_ans;
