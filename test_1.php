@@ -4,7 +4,7 @@ $msg="";
 $m_type="";
 $regs="";
 $msg_check="";
-$it=3;
+$it=9;
 	
 include("Message.php");
 
@@ -46,7 +46,7 @@ if (!is_null($events['events'])) {
 				$arrlength=count($msg_c);
 				$msg_check=$msg_decode['msg_check']." ต้องตอบว่าไงดี ???";	
 				
-				switch($arrlength){
+				switch($it){
 					case '1':
 						$messages = [
 							  "type"=>"template",
@@ -130,6 +130,9 @@ if (!is_null($events['events'])) {
 							  ]
 						];
 						break;
+					default:
+						$messages = ['type'=>'text','text'=>$s_ans];
+						
 				}
 			}else{
 				$messages = ['type'=>'text','text'=>$s_ans];
