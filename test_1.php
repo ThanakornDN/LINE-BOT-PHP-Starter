@@ -46,7 +46,7 @@ if (!is_null($events['events'])) {
 				$arrlength=count($msg_c);
 				$msg_check=$msg_decode['msg_check']." ต้องตอบว่าไงดี ???";	
 				
-				switch($it){
+				switch($arrlength){
 					case '1':
 						$messages = [
 							  "type"=>"template",
