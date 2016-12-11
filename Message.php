@@ -14,11 +14,14 @@ function find_ans($text) {
 		//	'type'=>'text',
 		//	'text'=>$m_stat
 		//];
-	    	array_push($ans_arr,$messages);
+	    	//array_push($ans_arr,$messages);
 	    	$data= array("msg"=>$m_stat,"msg_type"=>""); 
     
         $msg_ans =json_encode($data);
 	    //$msg_ans = $s_ans;
+    }else if($m_stat == 3){
+	    $data= array("msg"=>$m_stat,"msg_type"=>"insert");
+	    $msg_ans =json_encode($data);
     }else{
 
 	    	$messages = [
