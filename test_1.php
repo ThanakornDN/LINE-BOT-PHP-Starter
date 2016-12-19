@@ -242,7 +242,7 @@ if (!is_null($events['events'])) {
 			}
 		//}
 		
-	}else if($source == "group"){
+	//}else if($source == "group"){
 			$aa="dd";
 	}else{
 			$aa="dd";
