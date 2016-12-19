@@ -240,12 +240,12 @@ if (!is_null($events['events'])) {
 				curl_close($ch);
 
 			}
-		//}
+		}
 		
 	//}else if($source == "group"){
 			$aa="dd";
 	//}else{
-			$aa="dd";
+			$aa="dc";
 	}
 }
 echo "OK";
