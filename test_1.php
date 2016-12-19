@@ -242,7 +242,7 @@ if (!is_null($events['events'])) {
 			}
 		}
 		
-	//}else if($source == 'group'){
+	}else if($source == 'group'){
 			//if ($event['type'] == 'join' ) {
 				// Get text sent
 //				$text = $event['message']['text'];
