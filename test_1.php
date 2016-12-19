@@ -243,7 +243,7 @@ if (!is_null($events['events'])) {
 		}
 		
 	}else if($source == 'group'){
-			if ($event['type'] == 'join' ) {
+			//if ($event['type'] == 'join' ) {
 				// Get text sent
 				$text = $event['message']['text'];
 				// Get replyToken
@@ -273,7 +273,7 @@ if (!is_null($events['events'])) {
 				echo $result . "\r\n";
 //			}else	if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			
-			}
+			//}
 	}
 }
 echo "OK";
