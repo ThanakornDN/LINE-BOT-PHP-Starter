@@ -242,6 +242,38 @@ if (!is_null($events['events'])) {
 			}
 		}
 		
+	}else if($source == 'group'){
+			if ($event['type'] == 'join' ) {
+				// Get text sent
+				$text = $event['message']['text'];
+				// Get replyToken
+				$replyToken = $event['replyToken'];
+				
+				$messages = ['type'=>'text','text'=>$content];
+				
+				$url = 'https://api.line.me/v2/bot/message/reply';
+				$data = [
+					'replyToken' => $replyToken,
+					'messages' => [$messages],
+					//'messages' => [$msg],
+				];
+
+				$post = json_encode($data);
+				$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+
+				$ch = curl_init($url);
+				curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+				curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+				curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+				$result = curl_exec($ch);
+				curl_close($ch);
+
+				echo $result . "\r\n";
+//			}else	if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+			
+			}
 	}
 }
 echo "OK";
