@@ -7,6 +7,10 @@ var host= "m12.cloudmqtt.com";
 var port = 34115;
 var user = "tjrehruv";
 var pass = "FNBY4LmV_evX";
+ 
+<?php $msg_mqtt = "test_mqtt ms2g"; ?> 
+ 
+ 
 client = new Paho.MQTT.Client(host, Number(port), "clientId60");
  
 // set callback handlers
