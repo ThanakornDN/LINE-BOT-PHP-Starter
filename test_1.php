@@ -8,6 +8,7 @@ $it=9;
 $msg_mqtt ="";
 	
 include("Message.php");
+include("test_mqtt.php");
 
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -39,7 +40,13 @@ if (!is_null($events['events'])) {
 				$id_userMSG = $msg_decode['id_userMSG'];
 				
 				$msg_mqtt =$text;
-				include("test_mqtt.php");
+				
+				
+				echo '<script type="text/javascript">',
+				     'pub($msg_mqtt);',
+				     '</script>'
+				;
+
 				
 				if($msg_type=='Message'){
 					$messages = [
