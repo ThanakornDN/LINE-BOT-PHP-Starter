@@ -22,7 +22,7 @@ function onConnect() {
   console.log("onConnect");
   client.subscribe("TEST/MQTT/HEROKU/1");
 //   message = new Paho.MQTT.Message("Hello Sv"); //message pub
-  message = new Paho.MQTT.Message("<?php echo $text; ?>"); //message pub
+  message = new Paho.MQTT.Message("<?php echo "HOOOOO"; ?>"); //message pub
   message.destinationName = "TEST/MQTT/HEROKU/1"; //Toppic pub
   client.send(message);
 }
