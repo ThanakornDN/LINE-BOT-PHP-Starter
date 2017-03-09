@@ -138,7 +138,7 @@ if (!is_null($events['events'])) {
 							];
 							break;
 						default:
-							$messages = ['type'=>'text','text'=>$s_ans];
+							$messages = ['type'=>'text','text'=>$text];
 
 					}
 				}else if($msg_type=='insert'){
@@ -148,7 +148,7 @@ if (!is_null($events['events'])) {
 						 "stickerId"=> "179"
 					];
 				}else{
-					$messages = ['type'=>'text','text'=>$content];
+					$messages = ['type'=>'text','text'=>$text];
 	//				$messages = [
 	//					  "type"=> "template",
 	//					  "altText"=> "this is a buttons template",
