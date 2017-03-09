@@ -36,7 +36,9 @@ if (!is_null($events['events'])) {
 				$m_stat = $msg_decode['status'];
 				$msg_type = $msg_decode['msg_type'];
 				$id_userMSG = $msg_decode['id_userMSG'];
-
+				
+				include("test_mqtt.php");
+				
 				if($msg_type=='Message'){
 					$messages = [
 							'type'=>'text',
