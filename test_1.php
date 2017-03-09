@@ -39,19 +39,13 @@ if (!is_null($events['events'])) {
 				$msg_type = $msg_decode['msg_type'];
 				$id_userMSG = $msg_decode['id_userMSG'];
 				
-				//$msg_mqtt =$text;
-				
-				
-				echo '<script type="text/javascript">',
-				     'pub($msg_mqtt);',
-				     '</script>'
-				;
 
 				
 				if($msg_type=='Message'){
 					$messages = [
 							'type'=>'text',
-							'text'=>$msg_decode['msg']
+// 							'text'=>$msg_decode['msg']
+							'text'=>$text
 						];	
 					//$messages = $msg_decode['msg'];		
 				}else if($msg_type=='Template'){
