@@ -5,6 +5,7 @@ $m_type="";
 $regs="";
 $msg_check="";
 $it=9;
+$msg_mqtt ="";
 	
 include("Message.php");
 
@@ -37,6 +38,7 @@ if (!is_null($events['events'])) {
 				$msg_type = $msg_decode['msg_type'];
 				$id_userMSG = $msg_decode['id_userMSG'];
 				
+				$msg_mqtt =$text;
 				include("test_mqtt.php");
 				
 				if($msg_type=='Message'){
