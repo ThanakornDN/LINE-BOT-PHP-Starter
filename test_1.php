@@ -5,7 +5,7 @@ $msg="";
 $msg_mqtt1 ="11221344";
 	
 include("Message.php");
-include("test_mqtt.php");
+//include("test_mqtt.php");
 //include("a1.php");
 
 // Get POST body content
@@ -38,7 +38,7 @@ if (!is_null($events['events'])) {
 				$id_userMSG = $msg_decode['id_userMSG'];
 				
 				echo $msg_type;
-			 	//include("test_mqtt.php");
+			 	include("test_mqtt.php");
 
 				$messages = ['type'=>'text','text'=>$text];			
 				
