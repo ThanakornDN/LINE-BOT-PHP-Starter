@@ -43,7 +43,7 @@ function onMessageArrived(message) {
   console.log("onMessageArrived:"+message.payloadString);
 }
  
-function pub() {
+function pub($text) {
   console.log("<?php echo $content; ?>");
   message = new Paho.MQTT.Message("<?php echo $text; ?>");
   message.destinationName = "INTNIN_LAB/CHAT_BOT";
