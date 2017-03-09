@@ -1,5 +1,5 @@
 <?php
 
-$msg_mqtt="ab12";
+$msg_mqtt=$it;
 include("a2.php");
 ?>
