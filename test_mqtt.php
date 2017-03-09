@@ -1,4 +1,4 @@
-<script src="lib/mqtt.js"></script>
+<script src="mqtt.js"></script>
 <script type="text/javascript">
 // Create a client instance
 var mes = "";
