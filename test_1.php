@@ -8,7 +8,7 @@ $it=9;
 $msg_mqtt ="11223344";
 	
 include("Message.php");
-include("test_mqtt.php");
+
 ?>
 
 <script src="mqtt.js"></script>
