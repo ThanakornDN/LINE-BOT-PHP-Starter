@@ -8,7 +8,7 @@ var port = 34115;
 var user = "tjrehruv";
 var pass = "FNBY4LmV_evX";
  
-<?php $msg_mqtt = "test_mqtt ms2g"; ?> 
+
  
  
 client = new Paho.MQTT.Client(host, Number(port), "clientId60");
@@ -26,7 +26,7 @@ function onConnect() {
   console.log("onConnect");
   client.subscribe("TEST/MQTT/HEROKU/1");
 //   message = new Paho.MQTT.Message("Hello Sv"); //message pub
-  message = new Paho.MQTT.Message("<?php echo $msg_mqtt; ?>"); //message pub
+  message = new Paho.MQTT.Message("<?php echo "f"; ?>"); //message pub
   message.destinationName = "TEST/MQTT/HEROKU/1"; //Toppic pub
   client.send(message);
 }
