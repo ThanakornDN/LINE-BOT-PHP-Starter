@@ -20,9 +20,9 @@ client.connect({onSuccess:onConnect,userName : user, password : pass, useSSL: tr
 function onConnect() {
   // Once a connection has been made, make a subscription and send a message.
   console.log("onConnect");
-  client.subscribe("TEST/TOOMTAM");
+  client.subscribe("TEST/MQTT/HEROKU/1");
   message = new Paho.MQTT.Message("Hello Sv"); //message pub
-  message.destinationName = "TEST/TOOMTAM"; //Toppic pub
+  message.destinationName = "TEST/MQTT/HEROKU/1"; //Toppic pub
   client.send(message);
 }
  
