@@ -1,10 +1,7 @@
 <?php
 $access_token = 'VlxSZTyumW3qJsUKMnKOTLdqRd7chFWFJARPb7ZB/n3Lzf/lntpuOwBiLNieMReH3aFrT4MoAEWCdFruNp/7VHg3RkM1ja3AUtYVlDabJUgo6wAKsQyrZVo9Vxq+/py7le7bLr6ZDSp6qQHy0RiI2gdB04t89/1O/w1cDnyilFU=';
 $msg="";
-$m_type="";
-$regs="";
-$msg_check="";
-$it=9;
+// $it=9;
 $msg_mqtt1 ="11221344";
 	
 include("Message.php");
