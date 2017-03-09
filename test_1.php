@@ -8,8 +8,8 @@ $it=9;
 $msg_mqtt1 ="11221344";
 	
 include("Message.php");
-include("test_mqtt.php");
-include("a2.php");
+// include("test_mqtt.php");
+include("a1.php");
 
 // Get POST body content
 $content = file_get_contents('php://input');
