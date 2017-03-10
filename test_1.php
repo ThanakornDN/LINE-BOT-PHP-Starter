@@ -6,7 +6,8 @@ $msg_mqtt1 ="11221344";
 	
 include("Message.php");
 include("P_mqtt.php");
-call_mqtt();
+$tmsg = call_mqtt();
+echo $tmsg;
 
 // Get POST body content
 $content = file_get_contents('php://input');
