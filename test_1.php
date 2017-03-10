@@ -25,7 +25,7 @@ if (!is_null($events['events'])) {
 				// Get replyToken
 				$replyToken = $event['replyToken'];
 				$s_ans = find_ans($text);
-
+				$output = shell_exec('php test_mqtt.php');
 				//$s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/check_MSG.php?msg='.$text);			
 
 				$msg_decode = json_decode($s_ans, true);
