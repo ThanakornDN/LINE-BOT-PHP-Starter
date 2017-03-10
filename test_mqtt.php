@@ -16,16 +16,13 @@ client.onMessageArrived = onMessageArrived;
 
 // connect the client
 client.connect({onSuccess:onConnect,userName : user, password : pass, useSSL: true});
-
-
-
 // called when the client connects
 function onConnect() {
   // Once a connection has been made, make a subscription and send a message.
   console.log("onConnect");
   client.subscribe("TEST/MQTT/HEROKU/1"); //Toppic sub
   //message = new Paho.MQTT.Message("Hello MJU"); //message pub
-  message = new Paho.MQTT.Message("test2"); //message pub
+  message = new Paho.MQTT.Message("test3"); //message pub
   message.destinationName = "TEST/MQTT/HEROKU/1"; //Toppic pub
   client.send(message);
 }
