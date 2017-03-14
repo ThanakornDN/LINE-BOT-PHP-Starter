@@ -39,4 +39,14 @@ function onMessageArrived(message) {
   console.log("onMessageArrived:"+message.payloadString);
  // alert(message);
 }
+  
+function onConnect2() {
+  // Once a connection has been made, make a subscription and send a message.
+  console.log("onConnect2");
+  //message = new Paho.MQTT.Message("Hello MJU"); //message pub
+  message = new Paho.MQTT.Message("test  ms44"); //message pub
+  message.destinationName = "TEST/MQTT/HEROKU/2"; //Toppic pub
+  client.send(message);
+}  
+  
 </script>
