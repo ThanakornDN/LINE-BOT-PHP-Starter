@@ -37,11 +37,11 @@ function onConnectionLost(responseObject) {
 // called when a message arrives
 function onMessageArrived(message) {
   console.log("onMessageArrived:"+message.payloadString);
-  onConnect2();
+  send_mqtt();
  // alert(message);
 }
   
-function onConnect2() {
+function send_mqtt() {
   // Once a connection has been made, make a subscription and send a message.
   console.log("onConnect2");
   //message = new Paho.MQTT.Message("Hello MJU"); //message pub
