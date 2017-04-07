@@ -3,7 +3,7 @@
 function find_ans($text) {
     $ans_arr =array();
     $ans_data =array();
-    $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/LineAPI/check_MSG.php?msg='.$text);
+    $s_ans = file_get_contents('http://202.28.37.32/smartcsmju/Line_INTNINBOT/check_MSG.php?msg='.$text);
     $msg_decode = json_decode($s_ans, true);
     $m_stat = $msg_decode['status'];
     //$msg = $msg_decode['msg'];
